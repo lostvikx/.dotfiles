@@ -142,8 +142,8 @@ export NVM_DIR="$HOME/.nvm"
 
 # export PS1="${bold}\W ${blue}\$${reset} "
 
-# kindle_high
-export KINDLE_HIGH="/home/vik/.local/share/kindle-high/"
+# kindle_highlights
+#export KINDLE_HIGH='/home/vik/.local/share/kindle-high/'
 
 # Cargo
 . "$HOME/.cargo/env"
@@ -151,14 +151,14 @@ export KINDLE_HIGH="/home/vik/.local/share/kindle-high/"
 # Deno
 export PATH="$PATH:$HOME/.deno/bin"
 
-# Python Disable __pycache__
+# Python disable __pycache__
 export PYTHONDONTWRITEBYTECODE=1
 
-# go Executables
+# go executables
 export PATH="$PATH:$HOME/go/bin"
 
 # Change default text editor in terminal
-export EDITOR="vim"
+export EDITOR='vim'
 
 # Personal Script Files
 export PATH="$PATH:$HOME/programming/scripts"
@@ -169,4 +169,8 @@ if [ -f ~/.api_keys ]; then
 fi
 
 # Refer the Arch Wiki: https://wiki.archlinux.org/title/Kitty#Terminal_issues_with_SSH
-[ $TERM = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+[ $TERM = 'xterm-kitty' ] && alias ssh='kitty +kitten ssh'
+
+# Password Store
+export PASSWORD_STORE_CHARACTER_SET='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*'
+export PASSWORD_STORE_GENERATED_LENGTH=20
