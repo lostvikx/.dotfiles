@@ -9,6 +9,6 @@ apt install stow
 Use the following commands to use a symbolic link file instead of the config file.
 
 ```bash
-stow bash
+stow home
 stow -t ~/.config .config
 ```
