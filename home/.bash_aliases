@@ -46,3 +46,6 @@ alias myip='curl https://checkip.amazonaws.com'
 alias cp='cp -i'
 alias mv='mv -i'
 alias trash='mv -t ~/.trash'
+
+# Arch
+alias mirrorlist-update='reflector -c India -p https -n 5 --sort rate --thread 10 --save /etc/pacman.d/mirrorlist'
