@@ -37,7 +37,7 @@ alias yt-video-download="yt-dlp --config-locations ~/.config/yt-dlp/yt-dlp-confi
 alias yt-music-download="yt-dlp --config-locations ~/.config/yt-dlp/music-config.conf"
 
 # tools
-alias build-resume='pandoc -s -V geometry:"top=1cm, bottom=1cm, left=2cm, right=2cm" -V fontsize=12pt -V linestretch=0.85 -V linkcolor=blue -V header-includes="\usepackage{nopageno}" -o resume.pdf resume.md'
+#alias build-resume='pandoc -s -V geometry:"top=1cm, bottom=1cm, left=2cm, right=2cm" -V fontsize=10pt -V linestretch=0.85 -V linkcolor=blue -V header-includes="\usepackage{nopageno}" -o resume.pdf'
 alias catppuccin='lutgen apply --palette catppuccin-mocha'
 alias myip='curl https://checkip.amazonaws.com'
 
