@@ -60,11 +60,38 @@ keys = [
     Key([mod], "y", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    #Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
 
-    # Custom keybindings
+    # Custom Keybinds
     Key([mod], "b", lazy.spawn(browser), desc="Launch browser"),
     Key([mod], "f", lazy.spawn(file_manager), desc="Launch file manager"),
+
+    Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"), desc="Mute audio output"),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%"), desc="Decrease audio output"),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%"), desc="Increase audio output"),
+
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-"), desc="Decrease monitor brightness"),
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%"), desc="Increase monitor brightness"),
+
+    Key([mod], "r", lazy.spawn("rofi -show drun"), desc="Launch Rofi"),
+    Key([mod, "shift"], "r", lazy.spawn("rofi -show run"), desc="Rofi Run"),
+    Key([mod], "Tab", lazy.spawn("rofi -show window"), desc="Rofi Window Switcher"),
+
+    Key(
+        [], "Print", 
+        lazy.spawn("maim -s | xclip -selection clipboard -t image/png", shell=True),
+        desc="Screenshot selection to clipboard"
+    ),
+    Key(
+        ["shift"], "Print", 
+        lazy.spawn("maim ~/Pictures/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png", shell=True),
+        desc="Screenshot fullscreen to file"
+    ),
+    Key(
+        ["control"], "Print", 
+        lazy.spawn("maim | xclip -selection clipboard -t image/png", shell=True),
+        desc="Screenshot fullscreen to clipboard"
+    ),
 ]
 
 # Add key bindings to switch VTs in Wayland.
@@ -112,7 +139,7 @@ layouts = [
     layout.Columns(
         border_focus="#cba6f7", border_focus_stack="#fab387",
         border_normal="#181825", border_normal_stack="#181825",
-        border_width=2, margin=[4,2,4,2], insert_position=1, 
+        border_width=3, margin=[4,4,4,4], insert_position=1, 
         border_on_single=True, num_columns=2),
     # layout.Max(),
     # layout.Stack(num_stacks=2),
@@ -129,7 +156,7 @@ layouts = [
 
 widget_defaults = dict(
     font="monospace",
-    fontsize=12,
+    fontsize=14,
     padding=4,
 )
 extension_defaults = widget_defaults.copy()
