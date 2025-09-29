@@ -1,0 +1,827 @@
+2025-09-28T14:53:09 event: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+2025-09-28T14:53:09 update: spawned thread for update job id 1
+2025-09-28T14:53:09 state_file: Loading state file /home/vik/.config/mpd/mpd.state
+2025-09-28T14:53:09 update: starting
+2025-09-28T14:53:09 update: reading datasets/heavy-metal-80s/heavy_metal_80s.data
+2025-09-28T14:53:09 update: ignoring unrecognized file datasets/heavy-metal-80s/heavy_metal_80s.data
+2025-09-28T14:53:09 update: reading Offline Music/Africa.ogg
+2025-09-28T14:53:10 update: added Offline Music/Africa.ogg
+2025-09-28T14:53:10 update: reading Offline Music/We Will Rock You (Remastered 2011).ogg
+2025-09-28T14:53:10 update: added Offline Music/We Will Rock You (Remastered 2011).ogg
+2025-09-28T14:53:10 update: reading Offline Music/Don't Stop Me Now (Remastered 2011).ogg
+2025-09-28T14:53:10 update: added Offline Music/Don't Stop Me Now (Remastered 2011).ogg
+2025-09-28T14:53:10 update: reading Offline Music/MIDDLE OF THE NIGHT.ogg
+2025-09-28T14:53:10 update: added Offline Music/MIDDLE OF THE NIGHT.ogg
+2025-09-28T14:53:10 update: reading Offline Music/The Boys Are Back In Town.ogg
+2025-09-28T14:53:10 update: added Offline Music/The Boys Are Back In Town.ogg
+2025-09-28T14:53:10 update: reading Offline Music/The Night We Met.ogg
+2025-09-28T14:53:10 update: added Offline Music/The Night We Met.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Black Betty.ogg
+2025-09-28T14:53:10 update: added Offline Music/Black Betty.ogg
+2025-09-28T14:53:10 update: reading Offline Music/La La La (Brazil 2014).ogg
+2025-09-28T14:53:10 update: added Offline Music/La La La (Brazil 2014).ogg
+2025-09-28T14:53:10 update: reading Offline Music/Rock'n Me.ogg
+2025-09-28T14:53:10 update: added Offline Music/Rock'n Me.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Here Comes The Sun (Remastered 2009).ogg
+2025-09-28T14:53:10 update: added Offline Music/Here Comes The Sun (Remastered 2009).ogg
+2025-09-28T14:53:10 update: reading Offline Music/False Confidence.ogg
+2025-09-28T14:53:10 update: added Offline Music/False Confidence.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Youngblood.ogg
+2025-09-28T14:53:10 update: added Offline Music/Youngblood.ogg
+2025-09-28T14:53:10 update: reading Offline Music/The Final Countdown.ogg
+2025-09-28T14:53:10 update: added Offline Music/The Final Countdown.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Game of Thrones Main Theme - Medieval Style.ogg
+2025-09-28T14:53:10 update: added Offline Music/Game of Thrones Main Theme - Medieval Style.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Lush Life.ogg
+2025-09-28T14:53:10 update: added Offline Music/Lush Life.ogg
+2025-09-28T14:53:10 update: reading Offline Music/In the Air Tonight (2015 Remaster).ogg
+2025-09-28T14:53:10 update: added Offline Music/In the Air Tonight (2015 Remaster).ogg
+2025-09-28T14:53:10 update: reading Offline Music/24K Magic.ogg
+2025-09-28T14:53:10 update: added Offline Music/24K Magic.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Sweet Caroline.ogg
+2025-09-28T14:53:10 update: added Offline Music/Sweet Caroline.ogg
+2025-09-28T14:53:10 update: reading Offline Music/So High.ogg
+2025-09-28T14:53:10 update: added Offline Music/So High.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Rasputin.ogg
+2025-09-28T14:53:10 update: added Offline Music/Rasputin.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Woman.ogg
+2025-09-28T14:53:10 update: added Offline Music/Woman.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Uptown Funk.ogg
+2025-09-28T14:53:10 update: added Offline Music/Uptown Funk.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Havana.ogg
+2025-09-28T14:53:10 update: added Offline Music/Havana.ogg
+2025-09-28T14:53:10 update: reading Offline Music/I Want to Know What Love Is (1999 Remaster).ogg
+2025-09-28T14:53:10 update: added Offline Music/I Want to Know What Love Is (1999 Remaster).ogg
+2025-09-28T14:53:10 update: reading Offline Music/Dreams (2004 Remaster).ogg
+2025-09-28T14:53:10 update: added Offline Music/Dreams (2004 Remaster).ogg
+2025-09-28T14:53:10 update: reading Offline Music/Bad Liar.ogg
+2025-09-28T14:53:10 update: added Offline Music/Bad Liar.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Baby Blue (Remastered 2010).ogg
+2025-09-28T14:53:10 update: added Offline Music/Baby Blue (Remastered 2010).ogg
+2025-09-28T14:53:10 update: reading Offline Music/Love Is A Long Road.ogg
+2025-09-28T14:53:10 update: added Offline Music/Love Is A Long Road.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Cheri Cheri Lady.ogg
+2025-09-28T14:53:10 update: added Offline Music/Cheri Cheri Lady.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Fetish.ogg
+2025-09-28T14:53:10 update: added Offline Music/Fetish.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Believer.ogg
+2025-09-28T14:53:10 update: added Offline Music/Believer.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Back In Black.ogg
+2025-09-28T14:53:10 update: added Offline Music/Back In Black.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Sweet Home Alabama.ogg
+2025-09-28T14:53:10 update: added Offline Music/Sweet Home Alabama.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Don't Let Me Down.ogg
+2025-09-28T14:53:10 update: added Offline Music/Don't Let Me Down.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Let It Be (Remastered 2009).ogg
+2025-09-28T14:53:10 update: added Offline Music/Let It Be (Remastered 2009).ogg
+2025-09-28T14:53:10 update: reading Offline Music/Trampoline.ogg
+2025-09-28T14:53:10 update: added Offline Music/Trampoline.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Supercut.ogg
+2025-09-28T14:53:10 update: added Offline Music/Supercut.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Levitating.ogg
+2025-09-28T14:53:10 update: added Offline Music/Levitating.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Highway to Hell.ogg
+2025-09-28T14:53:10 update: added Offline Music/Highway to Hell.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Wanted Dead Or Alive.ogg
+2025-09-28T14:53:10 update: added Offline Music/Wanted Dead Or Alive.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Best Friend.ogg
+2025-09-28T14:53:10 update: added Offline Music/Best Friend.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Eye of the Tiger.ogg
+2025-09-28T14:53:10 update: added Offline Music/Eye of the Tiger.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Take on Me.ogg
+2025-09-28T14:53:10 update: added Offline Music/Take on Me.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Sunflower (Spider-Man: Into the Spider-Verse).ogg
+2025-09-28T14:53:10 update: added Offline Music/Sunflower (Spider-Man: Into the Spider-Verse).ogg
+2025-09-28T14:53:10 update: reading Offline Music/Dreamer.ogg
+2025-09-28T14:53:10 update: added Offline Music/Dreamer.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Police & Thieves (Remastered).ogg
+2025-09-28T14:53:10 update: added Offline Music/Police & Thieves (Remastered).ogg
+2025-09-28T14:53:10 update: reading Offline Music/Rather Be (feat. Jess Glynne).ogg
+2025-09-28T14:53:10 update: added Offline Music/Rather Be (feat. Jess Glynne).ogg
+2025-09-28T14:53:10 update: reading Offline Music/Immigrant Song (Remaster).ogg
+2025-09-28T14:53:10 update: added Offline Music/Immigrant Song (Remaster).ogg
+2025-09-28T14:53:10 update: reading Offline Music/Thunder.ogg
+2025-09-28T14:53:10 update: added Offline Music/Thunder.ogg
+2025-09-28T14:53:10 update: reading Offline Music/One Kiss.ogg
+2025-09-28T14:53:10 update: added Offline Music/One Kiss.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Still Don't Know My Name.ogg
+2025-09-28T14:53:10 update: added Offline Music/Still Don't Know My Name.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Rock You Like a Hurricane (2015 - Remaster).ogg
+2025-09-28T14:53:10 update: added Offline Music/Rock You Like a Hurricane (2015 - Remaster).ogg
+2025-09-28T14:53:10 update: reading Offline Music/Baby Come Back.ogg
+2025-09-28T14:53:10 update: added Offline Music/Baby Come Back.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Chantaje.ogg
+2025-09-28T14:53:10 update: added Offline Music/Chantaje.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Without Me.ogg
+2025-09-28T14:53:10 update: added Offline Music/Without Me.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Don't Stop Believin'.ogg
+2025-09-28T14:53:10 update: added Offline Music/Don't Stop Believin'.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Hold the Line.ogg
+2025-09-28T14:53:10 update: added Offline Music/Hold the Line.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Stairway to Heaven (Remaster).ogg
+2025-09-28T14:53:10 update: added Offline Music/Stairway to Heaven (Remaster).ogg
+2025-09-28T14:53:10 update: reading Offline Music/Under the Bridge.ogg
+2025-09-28T14:53:10 update: added Offline Music/Under the Bridge.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Bohemian Rhapsody (Remastered 2011).ogg
+2025-09-28T14:53:10 update: added Offline Music/Bohemian Rhapsody (Remastered 2011).ogg
+2025-09-28T14:53:10 update: reading Offline Music/Waiting For Love.ogg
+2025-09-28T14:53:10 update: added Offline Music/Waiting For Love.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Californication.ogg
+2025-09-28T14:53:10 update: added Offline Music/Californication.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Dandelions.ogg
+2025-09-28T14:53:10 update: added Offline Music/Dandelions.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Closer.ogg
+2025-09-28T14:53:10 update: added Offline Music/Closer.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Soviet Connection (Theme from GTA IV).ogg
+2025-09-28T14:53:10 update: added Offline Music/Soviet Connection (Theme from GTA IV).ogg
+2025-09-28T14:53:10 update: reading Offline Music/Hotel California (2013 Remaster).ogg
+2025-09-28T14:53:10 update: added Offline Music/Hotel California (2013 Remaster).ogg
+2025-09-28T14:53:10 update: reading Offline Music/Heat Waves.ogg
+2025-09-28T14:53:10 update: added Offline Music/Heat Waves.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Should I Stay or Should I Go (Remastered).ogg
+2025-09-28T14:53:10 update: added Offline Music/Should I Stay or Should I Go (Remastered).ogg
+2025-09-28T14:53:10 update: reading Offline Music/No Lie.ogg
+2025-09-28T14:53:10 update: added Offline Music/No Lie.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Wake Me Up.ogg
+2025-09-28T14:53:10 update: added Offline Music/Wake Me Up.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Señorita.ogg
+2025-09-28T14:53:10 update: added Offline Music/Señorita.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Watermelon Sugar.ogg
+2025-09-28T14:53:10 update: added Offline Music/Watermelon Sugar.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Slice of Life.ogg
+2025-09-28T14:53:10 update: added Offline Music/Slice of Life.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Something Just Like This.ogg
+2025-09-28T14:53:10 update: added Offline Music/Something Just Like This.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Child in Time (1995 Remaster).ogg
+2025-09-28T14:53:10 update: added Offline Music/Child in Time (1995 Remaster).ogg
+2025-09-28T14:53:10 update: reading Offline Music/Hips Don't Lie.ogg
+2025-09-28T14:53:10 update: added Offline Music/Hips Don't Lie.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Symphony (feat. Zara Larsson).ogg
+2025-09-28T14:53:10 update: added Offline Music/Symphony (feat. Zara Larsson).ogg
+2025-09-28T14:53:10 update: reading Offline Music/Dream On.ogg
+2025-09-28T14:53:10 update: added Offline Music/Dream On.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Smoke On The Water (Remastered 2012).ogg
+2025-09-28T14:53:10 update: added Offline Music/Smoke On The Water (Remastered 2012).ogg
+2025-09-28T14:53:10 update: reading Offline Music/1-800-273-8255.ogg
+2025-09-28T14:53:10 update: added Offline Music/1-800-273-8255.ogg
+2025-09-28T14:53:10 update: reading Offline Music/Pumped Up Kicks.ogg
+2025-09-28T14:53:11 update: added Offline Music/Pumped Up Kicks.ogg
+2025-09-28T14:53:11 update: reading Offline Music/Waka Waka (This Time for Africa) ( [The Official 2010 FIFA World Cup (TM) Song] (Single).ogg
+2025-09-28T14:53:11 update: added Offline Music/Waka Waka (This Time for Africa) ( [The Official 2010 FIFA World Cup (TM) Song] (Single).ogg
+2025-09-28T14:53:11 update: reading Offline Music/What Do You Mean？.ogg
+2025-09-28T14:53:11 update: added Offline Music/What Do You Mean？.ogg
+2025-09-28T14:53:11 update: reading Offline Music/Wonderwall (Remastered).ogg
+2025-09-28T14:53:11 update: added Offline Music/Wonderwall (Remastered).ogg
+2025-09-28T14:53:11 update: reading Offline Music/Location.ogg
+2025-09-28T14:53:11 update: added Offline Music/Location.ogg
+2025-09-28T14:53:11 update: reading Offline Music/American Pie.ogg
+2025-09-28T14:53:11 update: added Offline Music/American Pie.ogg
+2025-09-28T14:53:11 update: reading Offline Music/Don't Start Now.ogg
+2025-09-28T14:53:11 update: added Offline Music/Don't Start Now.ogg
+2025-09-28T14:53:11 update: reading Offline Music/Hey Jude (Remastered 2015).ogg
+2025-09-28T14:53:11 update: added Offline Music/Hey Jude (Remastered 2015).ogg
+2025-09-28T14:53:11 update: reading Offline Music/That's What I Like.ogg
+2025-09-28T14:53:11 update: added Offline Music/That's What I Like.ogg
+2025-09-28T14:53:11 update: reading Offline Music/Eastside.ogg
+2025-09-28T14:53:11 update: added Offline Music/Eastside.ogg
+2025-09-28T14:53:11 update: reading Offline Music/Stuck In The Middle With You.ogg
+2025-09-28T14:53:11 update: added Offline Music/Stuck In The Middle With You.ogg
+2025-09-28T14:53:11 update: reading Offline Music/Another One Bites The Dust (Remastered 2011).ogg
+2025-09-28T14:53:11 update: added Offline Music/Another One Bites The Dust (Remastered 2011).ogg
+2025-09-28T14:53:11 update: reading Offline Music/Livin' On A Prayer.ogg
+2025-09-28T14:53:11 update: added Offline Music/Livin' On A Prayer.ogg
+2025-09-28T14:53:11 update: reading Offline Music/Physical.ogg
+2025-09-28T14:53:11 update: added Offline Music/Physical.ogg
+2025-09-28T14:53:11 update: reading Offline Music/Sweet Child O' Mine.ogg
+2025-09-28T14:53:11 update: added Offline Music/Sweet Child O' Mine.ogg
+2025-09-28T14:53:11 update: reading Offline Music/Everybody Wants To Rule The World.ogg
+2025-09-28T14:53:11 update: added Offline Music/Everybody Wants To Rule The World.ogg
+2025-09-28T14:53:11 update: reading Offline Music/All Star.ogg
+2025-09-28T14:53:11 update: added Offline Music/All Star.ogg
+2025-09-28T14:53:11 update: reading Offline Music/Rockabye (feat. Sean Paul & Anne-Marie).ogg
+2025-09-28T14:53:11 update: added Offline Music/Rockabye (feat. Sean Paul & Anne-Marie).ogg
+2025-09-28T14:53:11 update: reading Offline Music/The Lazy Song.ogg
+2025-09-28T14:53:11 update: added Offline Music/The Lazy Song.ogg
+2025-09-28T14:53:11 update: reading Offline Music/Young Dumb & Broke.ogg
+2025-09-28T14:53:11 update: added Offline Music/Young Dumb & Broke.ogg
+2025-09-28T14:53:11 update: reading Offline Music/I Was Made For Lovin' You.ogg
+2025-09-28T14:53:11 update: added Offline Music/I Was Made For Lovin' You.ogg
+2025-09-28T14:53:11 update: reading Offline Music/Smooth Operator.ogg
+2025-09-28T14:53:11 update: added Offline Music/Smooth Operator.ogg
+2025-09-28T14:53:11 update: reading Offline Music/Free Fallin'.ogg
+2025-09-28T14:53:11 update: added Offline Music/Free Fallin'.ogg
+2025-09-28T14:53:11 update: reading Offline Music/Peaches.ogg
+2025-09-28T14:53:11 update: added Offline Music/Peaches.ogg
+2025-09-28T14:53:11 update: reading Offline Music/Grand Theft Auto San Andreas (Official Theme Song).ogg
+2025-09-28T14:53:11 update: added Offline Music/Grand Theft Auto San Andreas (Official Theme Song).ogg
+2025-09-28T14:53:11 update: reading Offline Music/Smells Like Teen Spirit.ogg
+2025-09-28T14:53:11 update: added Offline Music/Smells Like Teen Spirit.ogg
+2025-09-28T14:53:11 update: reading Offline Music/Life is a Highway.ogg
+2025-09-28T14:53:11 update: added Offline Music/Life is a Highway.ogg
+2025-09-28T14:53:11 update: reading Offline Music/Life in the Fast Lane (2013 Remaster).ogg
+2025-09-28T14:53:11 update: added Offline Music/Life in the Fast Lane (2013 Remaster).ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Tonight.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Tonight.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/The Nights.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/The Nights.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/L.A.F.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/L.A.F.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Out Of The Blue.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Out Of The Blue.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Tongues.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Tongues.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Sunshine.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Sunshine.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Uh la la.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Uh la la.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/My Type.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/My Type.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Move with You.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Move with You.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Wild Heart.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Wild Heart.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/stevie.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/stevie.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Give You Up (feat. Alex Clare).ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Give You Up (feat. Alex Clare).ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Are You What You Want to Be？.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Are You What You Want to Be？.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Around Town.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Around Town.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Utopia (Vocal Radio Edit).ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Utopia (Vocal Radio Edit).ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Palm Trees.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Palm Trees.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Come Alive.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Come Alive.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Water Fountain.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Water Fountain.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Crystal Ball.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Crystal Ball.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/16 Years.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/16 Years.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Sunrise.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Sunrise.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Purple Light.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Purple Light.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/All Or Nothing.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/All Or Nothing.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Down By The River.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Down By The River.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Mess Is Mine.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Mess Is Mine.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Walk.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Walk.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Busy Earnin'.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Busy Earnin'.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/We Are Done.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/We Are Done.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/The Valleys.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/The Valleys.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Super Critical.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Super Critical.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/When the Day Comes.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/When the Day Comes.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Tunnel Vision.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Tunnel Vision.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Brasil.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Brasil.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Cocoon.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Cocoon.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Push (feat. Andrew Wyatt).ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Push (feat. Andrew Wyatt).ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Levanta e Anda.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Levanta e Anda.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Imperium.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Imperium.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Agibore.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Agibore.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Cumbia del Corazón.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Cumbia del Corazón.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Everlasting.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Everlasting.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 15/Pressure.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 15/Pressure.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Hit It.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Hit It.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/F For You.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/F For You.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/I Know It's You.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/I Know It's You.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Am Ende.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Am Ende.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/I'm with You.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/I'm with You.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Down Town.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Down Town.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Lived a Lie.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Lived a Lie.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Here.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Here.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Purple Yellow Red and Blue.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Purple Yellow Red and Blue.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/The City.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/The City.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/We Sink.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/We Sink.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Get Down.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Get Down.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Dreaming.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Dreaming.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/T.U.B.E..ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/T.U.B.E..ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Little Games (St. Lucia Remix).ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Little Games (St. Lucia Remix).ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Compliment Your Soul.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Compliment Your Soul.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Funky Futurista.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Funky Futurista.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Magic.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Magic.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Ratchet.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Ratchet.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/On Our Way.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/On Our Way.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Você Diz Que O Amor Não Dói.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Você Diz Que O Amor Não Dói.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Hot.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Hot.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Boa Noite.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Boa Noite.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Runnin'.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Runnin'.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Love Me Again.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Love Me Again.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Mechanical.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Mechanical.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Don't Forget Who You Are.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Don't Forget Who You Are.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Foals - My Number (Trophy Wife remix).ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Foals - My Number (Trophy Wife remix).ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/24 Hours.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/24 Hours.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Marathon.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Marathon.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Miko.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Miko.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Alive.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Alive.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/I Am (feat. Wyclef Jean).ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/I Am (feat. Wyclef Jean).ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Worship You.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Worship You.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Copy of A.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Copy of A.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Love Natural.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Love Natural.ogg
+2025-09-28T14:53:11 update: reading FIFA - Soundtrack/FIFA 14/Hearts Like Ours.ogg
+2025-09-28T14:53:11 update: added FIFA - Soundtrack/FIFA 14/Hearts Like Ours.ogg
+2025-09-28T14:53:11 update: reading /(NSDR) Non-Sleep Deep Rest with Dr. Andrew Huberman.ogg
+2025-09-28T14:53:11 update: added /(NSDR) Non-Sleep Deep Rest with Dr. Andrew Huberman.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Paris Latino.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Paris Latino.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/She's On Fire (From ＂Scarface＂ Soundtrack).ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/She's On Fire (From ＂Scarface＂ Soundtrack).ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Cruel Summer.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Cruel Summer.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Self Control.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Self Control.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Billie Jean.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Billie Jean.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Big in Japan.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Big in Japan.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Beat It.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Beat It.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/And the Beat Goes On.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/And the Beat Goes On.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Cheri Cheri Lady.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Cheri Cheri Lady.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/In The Heat Of The Night.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/In The Heat Of The Night.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Fresh.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Fresh.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Somebody's Watching Me.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Somebody's Watching Me.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Act Like You Know.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Act Like You Know.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Touch in the Night.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Touch in the Night.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Scarface (Push It To The Limit).ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Scarface (Push It To The Limit).ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/On The Tray (Seven Years).ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/On The Tray (Seven Years).ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Caribbean Queen (No More Love On the Run).ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Caribbean Queen (No More Love On the Run).ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Just an Illusion.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Just an Illusion.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Hold the Line.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Hold the Line.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Danger Zone (From ＂Top Gun＂ Original Soundtrack).ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Danger Zone (From ＂Top Gun＂ Original Soundtrack).ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Domino Dancing (2018 Remaster).ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Domino Dancing (2018 Remaster).ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Stomp!.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Stomp!.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Stay the Night.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Stay the Night.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Burning Heart (From ＂Rocky IV＂ Soundtrack).ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Burning Heart (From ＂Rocky IV＂ Soundtrack).ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/[I'll Never Be] Maria Magdalena.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/[I'll Never Be] Maria Magdalena.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Boys (Summertime Love).ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Boys (Summertime Love).ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Touch Me (I Want Your Body).ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Touch Me (I Want Your Body).ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Livin' On A Prayer.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Livin' On A Prayer.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/La Isla Bonita.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/La Isla Bonita.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Everybody Wants To Rule The World.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Everybody Wants To Rule The World.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Smooth Operator.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Smooth Operator.ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Oh, don't lose your heart tonight (Maxi Version).ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Oh, don't lose your heart tonight (Maxi Version).ogg
+2025-09-28T14:53:11 update: reading Driving in 80s Miami/Stop the rain in the night.ogg
+2025-09-28T14:53:11 update: added Driving in 80s Miami/Stop the rain in the night.ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Africa.ogg
+2025-09-28T14:53:11 update: added GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Africa.ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Keep on Loving You.ogg
+2025-09-28T14:53:11 update: added GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Keep on Loving You.ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Wow (2018 Remaster).ogg
+2025-09-28T14:53:11 update: added GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Wow (2018 Remaster).ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Tempted.ogg
+2025-09-28T14:53:11 update: added GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Tempted.ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Broken Wings.ogg
+2025-09-28T14:53:11 update: added GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Broken Wings.ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Missing You.ogg
+2025-09-28T14:53:11 update: added GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Missing You.ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Sister Christian.ogg
+2025-09-28T14:53:11 update: added GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Sister Christian.ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Crockett's Theme.ogg
+2025-09-28T14:53:11 update: added GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Crockett's Theme.ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/[I Just] Died In Your Arms.ogg
+2025-09-28T14:53:11 update: added GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/[I Just] Died In Your Arms.ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Never Too Much.ogg
+2025-09-28T14:53:11 update: added GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Never Too Much.ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/More Than This.ogg
+2025-09-28T14:53:11 update: added GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/More Than This.ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Waiting for a Girl like You.ogg
+2025-09-28T14:53:11 update: added GTA Vice City - Radio Station/GTA Vice City - Emotion 98.3/Waiting for a Girl like You.ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Flash FM/Self Control.ogg
+2025-09-28T14:53:11 update: added GTA Vice City - Radio Station/GTA Vice City - Flash FM/Self Control.ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Flash FM/Steppin' Out.ogg
+2025-09-28T14:53:11 update: added GTA Vice City - Radio Station/GTA Vice City - Flash FM/Steppin' Out.ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Flash FM/Billie Jean.ogg
+2025-09-28T14:53:11 update: added GTA Vice City - Radio Station/GTA Vice City - Flash FM/Billie Jean.ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Flash FM/Four Little Diamonds.ogg
+2025-09-28T14:53:11 update: added GTA Vice City - Radio Station/GTA Vice City - Flash FM/Four Little Diamonds.ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Flash FM/Kiss The Dirt (Falling Down The Mountain).ogg
+2025-09-28T14:53:11 update: added GTA Vice City - Radio Station/GTA Vice City - Flash FM/Kiss The Dirt (Falling Down The Mountain).ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Flash FM/Owner of a Lonely Heart (2008 Remaster).ogg
+2025-09-28T14:53:11 update: added GTA Vice City - Radio Station/GTA Vice City - Flash FM/Owner of a Lonely Heart (2008 Remaster).ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Flash FM/Out of Touch (Video Mix).ogg
+2025-09-28T14:53:11 update: added GTA Vice City - Radio Station/GTA Vice City - Flash FM/Out of Touch (Video Mix).ogg
+2025-09-28T14:53:11 update: reading GTA Vice City - Radio Station/GTA Vice City - Flash FM/One Thing Leads To Another.ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Flash FM/One Thing Leads To Another.ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Flash FM/Japanese Boy.ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Flash FM/Japanese Boy.ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Flash FM/Run To You (Classic Version).ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Flash FM/Run To You (Classic Version).ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Flash FM/Dance Hall Days.ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Flash FM/Dance Hall Days.ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Flash FM/Running With The Night.ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Flash FM/Running With The Night.ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Flash FM/Video Killed The Radio Star.ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Flash FM/Video Killed The Radio Star.ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Flash FM/Call Me.ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Flash FM/Call Me.ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Flash FM/Your Love.ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Flash FM/Your Love.ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Flash FM/Life's What You Make It (1997 Remaster).ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Flash FM/Life's What You Make It (1997 Remaster).ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Fever 105/Wanna Be Startin' Somethin'.ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Fever 105/Wanna Be Startin' Somethin'.ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Fever 105/Mary Jane (All Night Long).ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Fever 105/Mary Jane (All Night Long).ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Fever 105/Get Down Saturday Night (Special Extended Version).ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Fever 105/Get Down Saturday Night (Special Extended Version).ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Fever 105/And the Beat Goes On.ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Fever 105/And the Beat Goes On.ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Fever 105/Last Night a D.J. Saved My Life.ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Fever 105/Last Night a D.J. Saved My Life.ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Fever 105/I'll Be Good.ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Fever 105/I'll Be Good.ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Fever 105/Act Like You Know.ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Fever 105/Act Like You Know.ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Fever 105/Juicy Fruit.ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Fever 105/Juicy Fruit.ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Fever 105/Ghetto Life.ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Fever 105/Ghetto Life.ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Fever 105/Summer Madness.ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Fever 105/Summer Madness.ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Fever 105/Behind The Groove.ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Fever 105/Behind The Groove.ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Fever 105/Automatic.ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Fever 105/Automatic.ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Fever 105/Shame.ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Fever 105/Shame.ogg
+2025-09-28T14:53:12 update: reading GTA Vice City - Radio Station/GTA Vice City - Flash FM.ogg
+2025-09-28T14:53:12 update: added GTA Vice City - Radio Station/GTA Vice City - Flash FM.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/Rainbow In The Dark.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/Rainbow In The Dark.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/Saint-Saëns： Danse macabre, Op. 40.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/Saint-Saëns： Danse macabre, Op. 40.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/Heart Of The Night.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/Heart Of The Night.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/Can't Fight This Feeling.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/Can't Fight This Feeling.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/Love Is A Long Road.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/Love Is A Long Road.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/People Get Ready.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/People Get Ready.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/Hell's Bells.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/Hell's Bells.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/Ogre Battle (Remastered 2011).ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/Ogre Battle (Remastered 2011).ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/Black Dog (Remaster).ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/Black Dog (Remaster).ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/When the Levee Breaks (Remaster).ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/When the Levee Breaks (Remaster).ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/Renegade.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/Renegade.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/Dance Hall Days.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/Dance Hall Days.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/Eleanor Rigby (Remastered 2009).ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/Eleanor Rigby (Remastered 2009).ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/Danny's Song.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/Danny's Song.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/Heaven (Classic Version).ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/Heaven (Classic Version).ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/Walk Of Life (Remastered 1996).ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/Walk Of Life (Remastered 1996).ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/Crockett's Theme (From ＂Miami Vice II＂ Soundtrack).ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/Crockett's Theme (From ＂Miami Vice II＂ Soundtrack).ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/Roundabout (2008 Remaster).ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/Roundabout (2008 Remaster).ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/Listen to the Music.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/Listen to the Music.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/From the Beginning.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/From the Beginning.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Phantom Blood/JOJO SONO CHINO SADAME.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Phantom Blood/JOJO SONO CHINO SADAME.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Battle Tendency/Drive.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Battle Tendency/Drive.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Battle Tendency/You Shook Me All Night Long.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Battle Tendency/You Shook Me All Night Long.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Battle Tendency/Led Boots.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Battle Tendency/Led Boots.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Battle Tendency/Nice, Nice, Very Nice.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Battle Tendency/Nice, Nice, Very Nice.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Battle Tendency/You've Really Got a Hold on Me.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Battle Tendency/You've Really Got a Hold on Me.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Battle Tendency/Here Comes The Sun (Remastered 2009).ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Battle Tendency/Here Comes The Sun (Remastered 2009).ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Battle Tendency/Elephant Talk.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Battle Tendency/Elephant Talk.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Battle Tendency/Aja.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Battle Tendency/Aja.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Battle Tendency/I Wonder If I Take You Home.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Battle Tendency/I Wonder If I Take You Home.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Battle Tendency/Owner of a Lonely Heart.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Battle Tendency/Owner of a Lonely Heart.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Battle Tendency/Suzie Q.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Battle Tendency/Suzie Q.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Battle Tendency/Making Love Out of Nothing at All.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Battle Tendency/Making Love Out of Nothing at All.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Battle Tendency/BLOODY STREAM.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Battle Tendency/BLOODY STREAM.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Battle Tendency/Your Mama Don't Dance.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Battle Tendency/Your Mama Don't Dance.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Battle Tendency/Maria Maria.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Battle Tendency/Maria Maria.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Battle Tendency/Season of the Witch.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Battle Tendency/Season of the Witch.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Battle Tendency/I Got You (I Feel Good).ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Battle Tendency/I Got You (I Feel Good).ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Battle Tendency/Wake Me Up Before You Go-Go.ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Battle Tendency/Wake Me Up Before You Go-Go.ogg
+2025-09-28T14:53:12 update: reading JoJo's Bizarre Adventure/Battle Tendency/Roundabout (2008 Remaster).ogg
+2025-09-28T14:53:12 update: added JoJo's Bizarre Adventure/Battle Tendency/Roundabout (2008 Remaster).ogg
+2025-09-28T14:53:12 update: reading docs/80s_top_artists.txt
+2025-09-28T14:53:12 ffmpeg/tty: Format tty probed with size=2048 and score=98
+2025-09-28T14:53:12 ffmpeg/tty: Before avformat_find_stream_info() pos: 0 bytes read:1298 seeks:0 nb_streams:1
+2025-09-28T14:53:12 ffmpeg/tty: All info found
+2025-09-28T14:53:12 ffmpeg/tty: stream 0: start_time: 0 duration: 0.24
+2025-09-28T14:53:12 ffmpeg/tty: format: start_time: 0 duration: 0.24 (estimate from stream) bitrate=43 kb/s
+2025-09-28T14:53:12 ffmpeg/tty: After avformat_find_stream_info() pos: 240 bytes read:1298 seeks:0 frames:1
+2025-09-28T14:53:12 update: ignoring unrecognized file docs/80s_top_artists.txt
+2025-09-28T14:53:12 update: reading docs/archive.txt
+2025-09-28T14:53:12 ffmpeg/tty: Format tty probed with size=2048 and score=99
+2025-09-28T14:53:12 ffmpeg/tty: Before avformat_find_stream_info() pos: 0 bytes read:6400 seeks:0 nb_streams:1
+2025-09-28T14:53:12 ffmpeg/tty: All info found
+2025-09-28T14:53:12 ffmpeg/tty: stream 0: start_time: 0 duration: 1.08
+2025-09-28T14:53:12 ffmpeg/tty: format: start_time: 0 duration: 1.08 (estimate from stream) bitrate=47 kb/s
+2025-09-28T14:53:12 ffmpeg/tty: After avformat_find_stream_info() pos: 240 bytes read:6400 seeks:0 frames:1
+2025-09-28T14:53:12 update: ignoring unrecognized file docs/archive.txt
+2025-09-28T14:53:12 update: reading Female Rock/Maps.ogg
+2025-09-28T14:53:12 update: added Female Rock/Maps.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Rebel Girl.ogg
+2025-09-28T14:53:12 update: added Female Rock/Rebel Girl.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Ironic (2015 Remaster).ogg
+2025-09-28T14:53:12 update: added Female Rock/Ironic (2015 Remaster).ogg
+2025-09-28T14:53:12 update: reading Female Rock/Sweet Dreams (Are Made of This).ogg
+2025-09-28T14:53:12 update: added Female Rock/Sweet Dreams (Are Made of This).ogg
+2025-09-28T14:53:12 update: reading Female Rock/Celebrity Skin.ogg
+2025-09-28T14:53:12 update: added Female Rock/Celebrity Skin.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Just A Girl.ogg
+2025-09-28T14:53:12 update: added Female Rock/Just A Girl.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Dreams (2004 Remaster).ogg
+2025-09-28T14:53:12 update: added Female Rock/Dreams (2004 Remaster).ogg
+2025-09-28T14:53:12 update: reading Female Rock/Hella Good.ogg
+2025-09-28T14:53:12 update: added Female Rock/Hella Good.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Somebody to Love.ogg
+2025-09-28T14:53:12 update: added Female Rock/Somebody to Love.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Me and Bobby McGee.ogg
+2025-09-28T14:53:12 update: added Female Rock/Me and Bobby McGee.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Zombie.ogg
+2025-09-28T14:53:12 update: added Female Rock/Zombie.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Edge of Seventeen.ogg
+2025-09-28T14:53:12 update: added Female Rock/Edge of Seventeen.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Love Is A Battlefield.ogg
+2025-09-28T14:53:12 update: added Female Rock/Love Is A Battlefield.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Brass in Pocket (2018 Remaster).ogg
+2025-09-28T14:53:12 update: added Female Rock/Brass in Pocket (2018 Remaster).ogg
+2025-09-28T14:53:12 update: reading Female Rock/Heartbreaker.ogg
+2025-09-28T14:53:12 update: added Female Rock/Heartbreaker.ogg
+2025-09-28T14:53:12 update: reading Female Rock/One Way Or Another.ogg
+2025-09-28T14:53:12 update: added Female Rock/One Way Or Another.ogg
+2025-09-28T14:53:12 update: reading Female Rock/I Love Rock 'N Roll.ogg
+2025-09-28T14:53:12 update: added Female Rock/I Love Rock 'N Roll.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Only Happy When It Rains (2015 Remaster).ogg
+2025-09-28T14:53:12 update: added Female Rock/Only Happy When It Rains (2015 Remaster).ogg
+2025-09-28T14:53:12 update: reading Female Rock/Kiss Me Deadly.ogg
+2025-09-28T14:53:12 update: added Female Rock/Kiss Me Deadly.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Because the Night.ogg
+2025-09-28T14:53:12 update: added Female Rock/Because the Night.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Bad Reputation.ogg
+2025-09-28T14:53:12 update: added Female Rock/Bad Reputation.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Rhiannon.ogg
+2025-09-28T14:53:12 update: added Female Rock/Rhiannon.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Crazy On You.ogg
+2025-09-28T14:53:12 update: added Female Rock/Crazy On You.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Everywhere (2017 Remaster).ogg
+2025-09-28T14:53:12 update: added Female Rock/Everywhere (2017 Remaster).ogg
+2025-09-28T14:53:12 update: reading Female Rock/Barracuda.ogg
+2025-09-28T14:53:12 update: added Female Rock/Barracuda.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Black Velvet.ogg
+2025-09-28T14:53:12 update: added Female Rock/Black Velvet.ogg
+2025-09-28T14:53:12 update: reading Female Rock/What's Up？.ogg
+2025-09-28T14:53:12 update: added Female Rock/What's Up？.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Cherry Bomb.ogg
+2025-09-28T14:53:12 update: added Female Rock/Cherry Bomb.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Call Me.ogg
+2025-09-28T14:53:12 update: added Female Rock/Call Me.ogg
+2025-09-28T14:53:12 update: reading Female Rock/Bring Me To Life.ogg
+2025-09-28T14:53:12 update: added Female Rock/Bring Me To Life.ogg
+2025-09-28T14:53:12 update: reading Female Rock/You Oughta Know (2015 Remaster).ogg
+2025-09-28T14:53:12 update: added Female Rock/You Oughta Know (2015 Remaster).ogg
+2025-09-28T14:53:12 update: reading Female Rock/Spellbound.ogg
+2025-09-28T14:53:12 update: added Female Rock/Spellbound.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Seven Nation Army.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Seven Nation Army.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Whole Lotta Love (Remaster).ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Whole Lotta Love (Remaster).ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Rainbow In The Dark.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Rainbow In The Dark.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Can't Stop.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Can't Stop.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Fade To Black (Remastered).ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Fade To Black (Remastered).ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/The Final Countdown.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/The Final Countdown.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Samba Pa Ti.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Samba Pa Ti.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Oh, Pretty Woman.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Oh, Pretty Woman.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Cocaine.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Cocaine.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Paranoid (2009 Remaster).ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Paranoid (2009 Remaster).ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Aqualung.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Aqualung.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Rockin' in the Free World.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Rockin' in the Free World.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Back In Black.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Back In Black.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Jump (2015 Remaster).ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Jump (2015 Remaster).ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Sweet Home Alabama.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Sweet Home Alabama.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Symphony Of Destruction.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Symphony Of Destruction.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Highway to Hell.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Highway to Hell.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Wanted Dead Or Alive.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Wanted Dead Or Alive.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Eye of the Tiger.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Eye of the Tiger.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Purple Haze.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Purple Haze.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Pull Me Under.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Pull Me Under.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Johnny B. Goode.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Johnny B. Goode.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Thunderstruck.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Thunderstruck.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Tom Sawyer.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Tom Sawyer.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Are You Gonna Go My Way.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Are You Gonna Go My Way.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Layla.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Layla.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Rock You Like a Hurricane (2015 - Remaster).ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Rock You Like a Hurricane (2015 - Remaster).ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Smooth.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Smooth.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Kayleigh (2017 Remaster).ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Kayleigh (2017 Remaster).ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Hold the Line.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Hold the Line.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Stairway to Heaven (Remaster).ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Stairway to Heaven (Remaster).ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Bohemian Rhapsody (Remastered 2011).ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Bohemian Rhapsody (Remastered 2011).ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Californication.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Californication.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Cemetery Gates.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Cemetery Gates.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Master Of Puppets (Remastered).ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Master Of Puppets (Remastered).ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Sweet Leaf (2009 Remaster).ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Sweet Leaf (2009 Remaster).ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Barracuda.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Barracuda.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Hey Joe.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Hey Joe.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Pretty Fly (For A White Guy).ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Pretty Fly (For A White Guy).ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Fortunate Son.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Fortunate Son.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/The House of the Rising Sun.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/The House of the Rising Sun.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Dream On.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Dream On.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Smoke On The Water (Remastered 2012).ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Smoke On The Water (Remastered 2012).ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Money For Nothing (Remastered 1996).ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Money For Nothing (Remastered 1996).ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Ace of Spades.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Ace of Spades.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Sultans Of Swing.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Sultans Of Swing.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Another Brick In The Wall (Part 2).ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Another Brick In The Wall (Part 2).ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/La Grange (2005 Remaster).ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/La Grange (2005 Remaster).ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Poison.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Poison.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Kashmir (1990 Remaster).ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Kashmir (1990 Remaster).ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/[Don't Fear] The Reaper.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/[Don't Fear] The Reaper.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Sweet Child O' Mine.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Sweet Child O' Mine.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/[I Can't Get No] Satisfaction (Mono).ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/[I Can't Get No] Satisfaction (Mono).ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Born To Be Wild.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Born To Be Wild.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/I Was Made For Lovin' You.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/I Was Made For Lovin' You.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Every Breath You Take.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Every Breath You Take.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Smells Like Teen Spirit.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Smells Like Teen Spirit.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Wipe Out.ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Wipe Out.ogg
+2025-09-28T14:53:12 update: reading Greatest Riffs/Helter Skelter (Remastered 2009).ogg
+2025-09-28T14:53:12 update: added Greatest Riffs/Helter Skelter (Remastered 2009).ogg
+2025-09-28T14:53:12 simple_db: removing empty directories from DB
+2025-09-28T14:53:12 simple_db: sorting DB
+2025-09-28T14:53:12 simple_db: writing DB
+2025-09-28T14:53:12 update: finished
+2025-09-28T14:55:21 state_file: Saving state file /home/vik/.config/mpd/mpd.state
+2025-09-28T14:57:24 event: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+2025-09-28T14:57:24 state_file: Loading state file /home/vik/.config/mpd/mpd.state
+2025-09-28T14:58:48 state_file: Saving state file /home/vik/.config/mpd/mpd.state
+2025-09-28T15:03:11 player: played "Driving in 80s Miami/Act Like You Know.ogg"
+2025-09-28T15:05:05 player: played "Driving in 80s Miami/Big in Japan.ogg"
+2025-09-28T15:06:35 exception: Failed to commit /home/vik/.config/mpd/mpd.state: File exists
+2025-09-28T15:07:18 exception: All outputs are disabled
+2025-09-28T15:09:05 player: played "(NSDR) Non-Sleep Deep Rest with Dr. Andrew Huberman.ogg"
+2025-09-28T15:15:29 player: played "Driving in 80s Miami/Self Control.ogg"
+2025-09-28T15:20:15 player: played "Driving in 80s Miami/Smooth Operator.ogg"
+2025-09-28T15:30:05 player: played "GTA Vice City - Radio Station/GTA Vice City - Flash FM/Call Me.ogg"
+2025-09-28T15:43:38 player: played "Greatest Riffs/Sweet Child O' Mine.ogg"
+2025-09-28T15:50:14 player: played "Greatest Riffs/Aqualung.ogg"
+2025-09-28T15:53:51 player: played "Greatest Riffs/Are You Gonna Go My Way.ogg"
