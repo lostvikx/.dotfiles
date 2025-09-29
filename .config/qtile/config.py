@@ -66,9 +66,28 @@ keys = [
     Key([mod], "b", lazy.spawn(browser), desc="Launch browser"),
     Key([mod], "f", lazy.spawn(file_manager), desc="Launch file manager"),
 
-    Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"), desc="Mute audio output"),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%"), desc="Decrease audio output"),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%"), desc="Increase audio output"),
+    # TODO: Use betterlockscreen here.
+    Key([mod], "Escape", lazy.spawn("i3lock -i ~/Pictures/lockscreen.png", shell=True), desc="Lock screen"),
+
+    #Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"), desc="Mute audio output"),
+    #Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%"), desc="Decrease audio output"),
+    #Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%"), desc="Increase audio output"),
+
+    Key(
+        [], "XF86AudioMute", 
+        lazy.spawn("pamixer --toggle-mute"), 
+        desc="Mute audio output"
+    ),
+    Key(
+        [], "XF86AudioLowerVolume", 
+        lazy.spawn("pamixer --unmute --decrease 5"), 
+        desc="Decrease audio output"
+    ),
+    Key(
+        [], "XF86AudioRaiseVolume", 
+        lazy.spawn("pamixer --unmute --increase 5"), 
+        desc="Increase audio output"
+    ),
 
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-"), desc="Decrease monitor brightness"),
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%"), desc="Increase monitor brightness"),
@@ -84,7 +103,7 @@ keys = [
     ),
     Key(
         ["shift"], "Print", 
-        lazy.spawn("maim ~/Pictures/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png", shell=True),
+        lazy.spawn("maim ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png", shell=True),
         desc="Screenshot fullscreen to file"
     ),
     Key(
@@ -163,39 +182,7 @@ extension_defaults = widget_defaults.copy()
 
 logo = os.path.join(os.path.dirname(libqtile.resources.__file__), "logo.png")
 screens = [
-    Screen(
-        bottom=bar.Bar(
-            [
-                #widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
-                widget.Chord(
-                    chords_colors={
-                        "launch": ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                ),
-                #widget.TextBox("default config", name="default"),
-                #widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
-                # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                # widget.StatusNotifier(),
-                widget.Systray(),
-                widget.Clock(format="%a %b %d %H:%M"),
-                #widget.QuickExit(),
-            ],
-            24,
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
-        ),
-        #background="#000000",
-        #wallpaper='/home/vik/Downloads/wallhaven-1j3yj9.jpg',
-        #wallpaper_mode="center",
-        # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
-        # By default we handle these events delayed to already improve performance, however your system might still be struggling
-        # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
-        # x11_drag_polling_rate = 60,
-    ),
+    Screen(),
 ]
 
 # Drag floating layouts.
