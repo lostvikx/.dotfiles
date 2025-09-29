@@ -158,7 +158,7 @@ layouts = [
     layout.Columns(
         border_focus="#cba6f7", border_focus_stack="#fab387",
         border_normal="#181825", border_normal_stack="#181825",
-        border_width=3, margin=[4,4,4,4], insert_position=1, 
+        border_width=2, margin=[4, 2, 0, 2], insert_position=1, 
         border_on_single=True, num_columns=2),
     # layout.Max(),
     # layout.Stack(num_stacks=2),
@@ -182,7 +182,12 @@ extension_defaults = widget_defaults.copy()
 
 logo = os.path.join(os.path.dirname(libqtile.resources.__file__), "logo.png")
 screens = [
-    Screen(),
+    Screen(
+        top=bar.Gap(0),
+        right=bar.Gap(2),
+        bottom=bar.Gap(0),
+        left=bar.Gap(2),
+    ),
 ]
 
 # Drag floating layouts.

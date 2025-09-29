@@ -1,12 +1,11 @@
 #!/bin/sh
 
-feh -zr ~/Pictures/walls/ --bg-scale
-#picom --experimental-backends --config ~/.config/picom/picom.conf -b
+feh -zr ~/Pictures/walls/ --bg-fill
 
 picom --config ~/.config/picom/picom.conf -b
 redshift -c ~/.config/redshift/redshift.conf &
 
-# Polybar
+# polybar
 killall -q polybar
 
 while pgrep -u $UID -x polybar >/dev/null; do 
