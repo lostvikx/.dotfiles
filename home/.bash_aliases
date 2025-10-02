@@ -43,3 +43,6 @@ alias myip='curl https://checkip.amazonaws.com'
 alias cp='cp -i'
 alias mv='mv -i'
 alias trash='mv -t ~/.trash'
+
+# pacman mirrorlist
+alias update-mirrors='sudo reflector $(< ~/.config/reflector/reflector.conf)'
