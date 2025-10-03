@@ -176,4 +176,8 @@
     override_pause_level = 60
     default_icon = dialog-warning
 
+[play_sound]
+summary = "*"
+script = /home/vik/.config/dunst/scripts/alert.sh
+
 # More information: /etc/dunst/dunstrc
