@@ -1,0 +1,65 @@
+# Options
+display_on=0
+span_image=false
+lock_timeout=300
+fx_list=(dim blur dimblur pixel dimpixel color)
+dim_level=50
+blur_level=1
+pixel_scale=10,1000
+solid_color=1e1e2e        # Base background
+wallpaper_cmd="feh --bg-fill"
+quiet=true
+
+# Theme
+loginbox=00000000         # Transparent box
+loginshadow=00000000
+locktext="Type Password"
+font="JetBrains Mono"
+
+ringcolor=cba6f7ff        # Mauve
+insidecolor=00000000
+separatorcolor=00000000
+
+ringvercolor=89b4faff     # Blue (Verifying)
+insidevercolor=00000000
+
+ringwrongcolor=f38ba8ff   # Red (Wrong password)
+insidewrongcolor=00000000
+
+timecolor=cdd6f4ff        # Text
+time_format="%b %d, %H:%M"
+
+greetercolor=cdd6f4ff     # Text
+layoutcolor=6c7086ff      # Overlay0
+keyhlcolor=1e1e2eff       # Mauve highlight
+bshlcolor=f38ba8ff        # Red backspace
+
+veriftext="Verifying"
+verifcolor=89b4faff       # Blue text
+
+wrongtext="Failure"
+wrongcolor=f38ba8ff       # Red text
+
+modifcolor=cba6f7ff       # Mauve modified key
+bgcolor=1e1e2eff          # Base
+
+# i3lock-color - Custom Arguments
+# Refer: man i3lock
+
+lockargs=(-n)
+lockargs+=(--ind-pos='x+400:y+h-100')
+lockargs+=(--time-pos="ix-350:iy-10")
+lockargs+=(--greeter-pos="ix-350:iy+30")
+
+lockargs+=(--verif-pos="ix+45:iy-50")
+lockargs+=(--wrong-pos="ix+35:iy-50")
+#lockargs+=(--modif-pos="ix+40:iy-50")
+
+lockargs+=(--time-size=36)
+lockargs+=(--greeter-size=20)
+lockargs+=(--layout-size=16)
+lockargs+=(--verif-size=16)
+lockargs+=(--wrong-size=16)
+lockargs+=(--modif-size=16)
+lockargs+=(--radius=35)
+lockargs+=(--ring-width=10)

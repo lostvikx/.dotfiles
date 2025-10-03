@@ -66,10 +66,9 @@ keys = [
     Key([mod], "b", lazy.spawn(browser), desc="Launch browser."),
     Key([mod], "f", lazy.spawn(file_manager), desc="Launch file manager."),
 
-    # TODO: Use betterlockscreen here.
-    Key([mod], "Escape", lazy.spawn("i3lock", shell=True), desc="Lock screen."),
+    Key([mod], "Escape", lazy.spawn("betterlockscreen --quiet --lock dimblur", shell=True), desc="Lock screen."),
 
-    # Auto controls.
+    # Audio controls.
     Key(
         [], "XF86AudioMute", 
         lazy.spawn("pamixer --toggle-mute"), 
@@ -216,7 +215,7 @@ floats_kept_above = True
 cursor_warp = False
 
 # Windows
-wmname = "Qtile"
+wmname = "qtile"
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 focus_previous_on_window_remove = False

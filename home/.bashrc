@@ -48,3 +48,5 @@ export PASSWORD_STORE_GENERATED_LENGTH=20
 # Script files
 export PATH="$PATH:$HOME/programming/scripts"
 export GTK_CSD=0
+
+. "$HOME/.cargo/env"
