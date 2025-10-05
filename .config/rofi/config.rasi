@@ -1,21 +1,20 @@
 configuration {
-    display-drun: "Application";
-    display-run: "Command";
-    display-window: "Window";
-    modi: "drun,run,window";
-    font: "JetBrainsMono Nerd Font 14";
-    show-icons: true;
-    icon-theme: "Papirus-Dark";
-    terminal: "kitty";
+    display-drun:        "Application";
+    display-run:         "Command";
+    display-window:      "Window";
+    display-emoji:       "Emoji";
+    display-calc:        "Calculate";
+    modi:                "drun,run,window,emoji,calc";
+    font:                "JetBrainsMono Nerd Font 14";
+    show-icons:          true;
+    icon-theme:          "Papirus-Dark";
+    terminal:            "kitty";
     drun-display-format: "{icon} {name}";
-    location: 0;
-    disable-history: false;
-    sidebar-mode: false;
+    location:            0;
+    disable-history:     false;
+    sidebar-mode:        false;
 }
 
-// @import "catppuccin-latte"
-// @import "catppuccin-frappe"
-// @import "catppuccin-macchiato"
 @import "catppuccin-mocha"
 
 * {
@@ -48,9 +47,9 @@ configuration {
 
 }
 element {
-    padding: 4 ;
+    padding: 4px;
     cursor:  default;
-    spacing: 5px ;
+    spacing: 5px;
     border:  0;
 }
 element normal.normal {
@@ -97,7 +96,7 @@ element-text {
 }
 element-icon {
     background-color: transparent;
-    size:             1.0000em ;
+    size:             1em;
     cursor:           inherit;
     text-color:       inherit;
 }
@@ -105,38 +104,39 @@ window {
     padding:          15;
     background-color: @background;
     border:           1;
+    width:            40%;
 }
 mainbox {
     padding: 0;
     border:  0;
 }
 message {
-    padding:      1px ;
+    padding:      8px 0 0 4px;
     border-color: @separatorcolor;
-    border:       2px dash 0px 0px ;
+    border:       0px dash 0px 0px;
 }
 textbox {
     text-color: @foreground;
 }
 listview {
     lines:        10;
-    padding:      10px 0px 0px ;
+    padding:      10px 0px 0px;
     scrollbar:    false;
     border-color: @separatorcolor;
-    spacing:      2px ;
+    spacing:      2px;
     fixed-height: 0;
-    border:       0px dash 0px 0px ;
+    border:       0px dash 0px 0px;
 }
 scrollbar {
-    width:        4px ;
+    width:        4px;
     padding:      0;
-    handle-width: 8px ;
+    handle-width: 8px;
     border:       0;
     handle-color: @normal-foreground;
 }
 sidebar {
     border-color: @separatorcolor;
-    border:       2px dash 0px 0px ;
+    border:       2px dash 0px 0px;
 }
 button {
     cursor:     pointer;
@@ -161,8 +161,8 @@ textbox-num-sep {
     text-color: Gray;
 }
 inputbar {
-    padding:    1px ;
-    spacing:    0px ;
+    padding:    1px;
+    spacing:    0px;
     text-color: @normal-foreground;
     children:   [ "prompt","textbox-prompt-colon","entry","num-filtered-rows","textbox-num-sep","num-rows","case-indicator" ];
 }
@@ -182,7 +182,7 @@ prompt {
     text-color: @normal-foreground;
 }
 textbox-prompt-colon {
-    margin:     0px 0.3000em 0.0000em 0.0000em ;
+    margin:     0px 0.3em 0em 0em ;
     expand:     false;
     str:        ":";
     text-color: inherit;

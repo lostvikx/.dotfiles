@@ -105,13 +105,33 @@ keys = [
     ),
     Key(
         [mod, "shift"], "r", 
-        lazy.spawn("rofi -show run"), 
+        lazy.spawn("rofi -show run -no-show-icons"), 
         desc="Launch rofi to run commands."
     ),
     Key(
         [mod], "Tab", 
         lazy.spawn("rofi -show window"), 
         desc="Launch rofi to switch windows."
+    ),
+    Key(
+        [mod, "shift"], "e",
+        lazy.spawn("rofi -modi emoji -show emoji"),
+        desc="Launch rofi to pick an emoji."
+    ),
+    Key(
+        [mod], "c",
+        lazy.spawn("rofi -show calc -no-show-match -no-sort", shell=True),
+        desc="Launch rofi to perform calculations."
+    ),
+    Key(
+        [mod], "l", 
+        lazy.spawn("/home/vik/.config/rofi/scripts/powermenu.sh", shell=True), 
+        desc="Launch rofi to manage power."
+    ),
+    Key(
+        [mod], "k", 
+        lazy.spawn("/home/vik/.config/rofi/scripts/kill.sh", shell=True), 
+        desc="Launch rofi to kill a process."
     ),
 
     # Taking screenshots of display.
