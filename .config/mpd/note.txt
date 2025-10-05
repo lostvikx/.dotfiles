@@ -1,0 +1,8 @@
+Create these files:
+
+-rw-r--r-- 1 vik vik  336 Sep 28 15:07 mpd.conf
+-rw-r--r-- 1 vik vik  19K Sep 28 14:53 mpd.db
+-rw-r--r-- 1 vik vik  67K Oct  4 15:51 mpd.log
+-rw-r--r-- 1 vik vik    5 Oct  4 15:47 mpd.pid
+-rw-r--r-- 1 vik vik  20K Oct  4 16:28 mpd.state
+drwxr-xr-x 2 vik vik 4.0K Sep 28 14:48 playlists
