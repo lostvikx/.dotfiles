@@ -7,11 +7,9 @@ Before=suspend.target
 User=%I
 Type=simple
 Environment=DISPLAY=:0
-Environment=XAUTHORITY=%h/.Xauthority
-Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/%U/bus
 ExecStart=/usr/bin/betterlockscreen --quiet --lock dimblur
 TimeoutSec=infinity
-ExecStartPost=/usr/bin/sleep 1
+ExecStartPost=/usr/bin/sleep 2
 
 [Install]
 WantedBy=sleep.target
