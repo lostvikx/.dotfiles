@@ -123,6 +123,8 @@ keys = [
         lazy.spawn("rofi -show calc -no-show-match -no-sort", shell=True),
         desc="Launch rofi to perform calculations."
     ),
+
+    # Personal rofi scripts.
     Key(
         [mod], "l", 
         lazy.spawn("/home/vik/.config/rofi/scripts/powermenu.sh", shell=True), 
@@ -133,22 +135,10 @@ keys = [
         lazy.spawn("/home/vik/.config/rofi/scripts/kill.sh", shell=True), 
         desc="Launch rofi to kill a process."
     ),
-
-    # Taking screenshots of display.
     Key(
         [], "Print", 
-        lazy.spawn("maim --noopengl -s | xclip -selection clipboard -t image/png", shell=True),
-        desc="Screenshot selection to clipboard."
-    ),
-    Key(
-        ["shift"], "Print", 
-        lazy.spawn("maim --noopengl ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png", shell=True),
-        desc="Screenshot fullscreen to file."
-    ),
-    Key(
-        ["control"], "Print", 
-        lazy.spawn("maim --noopengl | xclip -selection clipboard -t image/png", shell=True),
-        desc="Screenshot fullscreen to clipboard."
+        lazy.spawn("/home/vik/.config/rofi/scripts/screenshot.sh", shell=True), 
+        desc="Launch rofi to take a screenshot."
     ),
 ]
 

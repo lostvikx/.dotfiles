@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # More info: https://man.archlinux.org/man/extra/rofi/rofi-dmenu.5.en
-ACTION=$(echo "Lock,Suspend,Reboot,Shutdown" | rofi -sep ',' -dmenu -p 'Action' -l 4)
+
+ACTION=$(echo "Lock,Suspend,Reboot,Shutdown" | rofi -no-show-icons -sep ',' -dmenu -p 'Action' -l 4 -i)
 
 case "$ACTION" in
     "Lock")
