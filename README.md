@@ -1,14 +1,21 @@
 # Managing Config Files
 
-I am using GNU `stow` to manage these configuration files.
+Using GNU `stow` to manage these configuration files.
+
+## Setup
 
 ```bash
 pacman -S stow
+./stow-files
 ```
+## Examples
 
-Use the following commands to use a symbolic link file instead of the config file.
+Here is the rice showcase of my system.
 
-```bash
-stow home
-stow -t ~/.config .config
-```
+### Lockscreen
+
+![Lockscreen Screenshot](./assets/lockscreen.png)
+
+### Desktop Environment
+
+![Desktop Environment Screenshot](./assets/rice.png)
