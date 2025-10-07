@@ -119,19 +119,19 @@ keys = [
         desc="Launch rofi to pick an emoji."
     ),
     Key(
-        [mod], "c",
+        [mod, "shift"], "c",
         lazy.spawn("rofi -show calc -no-show-match -no-sort", shell=True),
         desc="Launch rofi to perform calculations."
     ),
 
     # Personal rofi scripts.
     Key(
-        [mod], "l", 
+        [mod, "shift"], "l", 
         lazy.spawn("/home/vik/.config/rofi/scripts/powermenu.sh", shell=True), 
         desc="Launch rofi to manage power."
     ),
     Key(
-        [mod], "k", 
+        [mod, "shift"], "k", 
         lazy.spawn("/home/vik/.config/rofi/scripts/kill.sh", shell=True), 
         desc="Launch rofi to kill a process."
     ),
