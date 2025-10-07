@@ -12,10 +12,6 @@ pacman -S stow
 
 Here is the rice showcase of my system.
 
-### Lockscreen
-
-![Lockscreen Screenshot](./assets/lockscreen.png)
-
-### Desktop Environment
-
-![Desktop Environment Screenshot](./assets/rice.png)
+Lockscreen|Desktop|
+:-----------------------------------------------:|:--------------------------------------------------:|
+![Lockscreen Screenshot](./assets/lockscreen.png)|![Desktop Environment Screenshot](./assets/rice.png)
