@@ -61,6 +61,12 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config."),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile."),
 
+    Key(
+        [], "Print", 
+        lazy.spawn("maim --noopengl ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png", shell=True), 
+        desc="Capture a screenshot."
+    ),
+
     # Launch applications.
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal."),
     Key([mod], "b", lazy.spawn(browser), desc="Launch browser."),
@@ -136,7 +142,7 @@ keys = [
         desc="Launch rofi to kill a process."
     ),
     Key(
-        [], "Print", 
+        [mod], "Print", 
         lazy.spawn("/home/vik/.config/rofi/scripts/screenshot.sh", shell=True), 
         desc="Launch rofi to take a screenshot."
     ),
