@@ -14,8 +14,8 @@ alias df='df -h'
 alias battery-status="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
 
 # package management
-alias update='sudo apt update && sudo apt upgrade -y'
-alias autoclean='sudo apt autoremove && sudo apt clean && sudo apt autoclean'
+# alias update='sudo apt update && sudo apt upgrade -y'
+# alias autoclean='sudo apt autoremove && sudo apt clean && sudo apt autoclean'
 
 # copy to clipboard (usage: cat file.txt | copy)
 alias copy='xclip -selection clipboard'
