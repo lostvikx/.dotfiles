@@ -2,12 +2,13 @@
 display_on=0
 span_image=false
 lock_timeout=300
-fx_list=(dim blur dimblur pixel dimpixel color)
+#fx_list=(dim blur dimblur pixel dimpixel color)
+fx_list=(dimblur)
 dim_level=50
 blur_level=1
 pixel_scale=10,1000
 solid_color=1e1e2e        # Base background
-wallpaper_cmd="feh --bg-fill"
+wallpaper_cmd="feh --bg-fill --no-fehbg"
 quiet=true
 
 # Theme
