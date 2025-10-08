@@ -132,12 +132,12 @@ keys = [
 
     # Personal rofi scripts.
     Key(
-        [mod, "shift"], "l", 
+        [mod, "shift"], "m", 
         lazy.spawn("/home/vik/.config/rofi/scripts/powermenu.sh", shell=True), 
         desc="Launch rofi to manage power."
     ),
     Key(
-        [mod, "shift"], "k", 
+        [mod, "shift"], "p", 
         lazy.spawn("/home/vik/.config/rofi/scripts/kill.sh", shell=True), 
         desc="Launch rofi to kill a process."
     ),
