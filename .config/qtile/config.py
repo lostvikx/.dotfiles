@@ -171,6 +171,7 @@ for i in groups:
 
 # Layouts
 margin = 3
+wrap = True
 
 layouts = [
     # NOTE: Check out the docs: https://docs.qtile.org/en/latest/manual/ref/layouts.html#columns
@@ -191,9 +192,9 @@ layouts = [
         num_columns = 2,
         single_border_width = None,
         split = True,
-        wrap_focus_columns = True,
-        wrap_focus_rows = True,
-        wrap_focus_stacks = True,
+        wrap_focus_columns = wrap,
+        wrap_focus_rows = wrap,
+        wrap_focus_stacks = wrap,
     ),
 ]
 
