@@ -15,5 +15,9 @@ set autoindent
 set smartindent
 
 set hlsearch
+set termguicolors
 
 nnoremap <CR> :nohlsearch<CR><CR>
+
+" Install theme: git clone https://github.com/catppuccin/vim.git ~/.vim/pack/vendor/start/catppuccin
+colorscheme catppuccin_mocha

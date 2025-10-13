@@ -45,6 +45,7 @@ fi
 # Password Store
 export PASSWORD_STORE_CHARACTER_SET='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*'
 export PASSWORD_STORE_GENERATED_LENGTH=20
+export PASSWORD_STORE_CLIP_TIME=30
 
 # Script files
 export PATH="$PATH:$HOME/programming/scripts"
