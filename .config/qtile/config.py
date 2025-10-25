@@ -171,7 +171,7 @@ for i in groups:
 
 # Layouts
 margin = 3
-wrap = True
+wrap = False
 
 layouts = [
     # NOTE: Check out the docs: https://docs.qtile.org/en/latest/manual/ref/layouts.html#columns
