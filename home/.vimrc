@@ -16,6 +16,7 @@ set smartindent
 
 set hlsearch
 set termguicolors
+set ttimeoutlen=50
 
 nnoremap <CR> :nohlsearch<CR><CR>
 
