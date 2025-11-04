@@ -2,20 +2,23 @@
 
 # More info: https://man.archlinux.org/man/extra/rofi/rofi-dmenu.5.en
 
-ACTION=$(echo "Lock,Suspend,Reboot,Shutdown" | rofi -no-show-icons -sep ',' -dmenu -p 'Action' -l 4 -i)
+ACTION=$(echo "Hibernate,Lock,Reboot,Shutdown,Sleep" | rofi -no-show-icons -sep ',' -dmenu -p 'Action' -l 5 -i)
 
 case "$ACTION" in
-    "Lock")
-        betterlockscreen --quiet --lock dimblur
+    "Hibernate")
+        systemctl hibernate
         ;;
-    "Suspend")
-        systemctl suspend
+    "Lock")
+        betterlockscreen --quiet --lock dimblur --off 30
         ;;
     "Reboot")
         reboot
         ;;
     "Shutdown")
         poweroff
+        ;;
+    "Sleep")
+        systemctl suspend
         ;;
     *)
         exit 1
