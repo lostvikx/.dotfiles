@@ -1,4 +1,4 @@
-# NOTE: I have removed all configs related to wayland.
+# Note: Cross-check with default config file.
 
 import os
 import subprocess
@@ -20,24 +20,80 @@ file_manager = "thunar"
 # Keybindings
 keys = [
     # Switch between windows.
-    Key([mod], "h", lazy.layout.left(), desc="Move focus to left."),
-    Key([mod], "l", lazy.layout.right(), desc="Move focus to right."),
-    Key([mod], "j", lazy.layout.down(), desc="Move focus down."),
-    Key([mod], "k", lazy.layout.up(), desc="Move focus up."),
-    Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window."),
+    Key(
+        [mod], "h", 
+        lazy.layout.left(), 
+        desc="Move focus to left."
+    ),
+    Key(
+        [mod], "l", 
+        lazy.layout.right(), 
+        desc="Move focus to right."
+    ),
+    Key(
+        [mod], "j", 
+        lazy.layout.down(), 
+        desc="Move focus down."
+    ),
+    Key(
+        [mod], "k", 
+        lazy.layout.up(), 
+        desc="Move focus up."
+    ),
+    Key(
+        [mod], "space", 
+        lazy.layout.next(), 
+        desc="Move window focus to other window."
+    ),
 
     # Moving window to a new column or row.
-    Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left."),
-    Key([mod, "shift"], "l", lazy.layout.shuffle_right(), desc="Move window to the right."),
-    Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down."),
-    Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up."),
+    Key(
+        [mod, "shift"], "h", 
+        lazy.layout.shuffle_left(), 
+        desc="Move window to the left."
+    ),
+    Key(
+        [mod, "shift"], "l", 
+        lazy.layout.shuffle_right(), 
+        desc="Move window to the right."
+    ),
+    Key(
+        [mod, "shift"], "j", 
+        lazy.layout.shuffle_down(), 
+        desc="Move window down."
+    ),
+    Key(
+        [mod, "shift"], "k", 
+        lazy.layout.shuffle_up(), 
+        desc="Move window up."
+    ),
 
     # Grow windows.
-    Key([mod, "control"], "h", lazy.layout.grow_left(), desc="Grow window to the left."),
-    Key([mod, "control"], "l", lazy.layout.grow_right(), desc="Grow window to the right."),
-    Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down."),
-    Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up."),
-    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes."),
+    Key(
+        [mod, "control"], "h", 
+        lazy.layout.grow_left(), 
+        desc="Grow window to the left."
+    ),
+    Key(
+        [mod, "control"], "l", 
+        lazy.layout.grow_right(), 
+        desc="Grow window to the right."
+    ),
+    Key(
+        [mod, "control"], "j", 
+        lazy.layout.grow_down(), 
+        desc="Grow window down."
+    ),
+    Key(
+        [mod, "control"], "k", 
+        lazy.layout.grow_up(), 
+        desc="Grow window up."
+    ),
+    Key(
+        [mod], "n", 
+        lazy.layout.normalize(), 
+        desc="Reset all window sizes."
+    ),
 
     # Toggle between split and unsplit sides of stack.
     Key(
@@ -47,7 +103,11 @@ keys = [
     ),
 
     # Other common actions.
-    Key([mod, "shift"], "q", lazy.window.kill(), desc="Kill focused window."),
+    Key(
+        [mod, "shift"], "q", 
+        lazy.window.kill(), 
+        desc="Kill focused window."
+    ),
     Key(
         [mod, "shift"], "f",
         lazy.window.toggle_fullscreen(),
@@ -58,21 +118,43 @@ keys = [
         lazy.window.toggle_floating(), 
         desc="Toggle floating on the focused window."
     ),
-    Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config."),
-    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile."),
-
+    Key(
+        [mod, "control"], "r", 
+        lazy.reload_config(), 
+        desc="Reload the config."
+    ),
+    Key(
+        [mod, "control"], "q", 
+        lazy.shutdown(), 
+        desc="Shutdown Qtile."
+    ),
     Key(
         [], "Print", 
-        lazy.spawn("maim --noopengl ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png", shell=True), 
+        lazy.spawn("capture-screenshot", shell=True), 
         desc="Capture a screenshot."
+    ),
+    Key(
+        [mod], "Escape", 
+        lazy.spawn("betterlockscreen --lock dimblur --off 30", shell=True), 
+        desc="Lock screen."
     ),
 
     # Launch applications.
-    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal."),
-    Key([mod], "b", lazy.spawn(browser), desc="Launch browser."),
-    Key([mod], "f", lazy.spawn(file_manager), desc="Launch file manager."),
-
-    Key([mod], "Escape", lazy.spawn("betterlockscreen --quiet --lock dimblur", shell=True), desc="Lock screen."),
+    Key(
+        [mod], "Return", 
+        lazy.spawn(terminal), 
+        desc="Launch terminal."
+    ),
+    Key(
+        [mod], "b", 
+        lazy.spawn(browser), 
+        desc="Launch browser."
+    ),
+    Key(
+        [mod], "f", 
+        lazy.spawn(file_manager), 
+        desc="Launch file manager."
+    ),
 
     # Audio controls.
     Key(
@@ -148,6 +230,17 @@ keys = [
     ),
 ]
 
+# VTs in Wayland (?)
+for vt in range(1, 8):
+    keys.append(
+        Key(
+            ["control", "mod1"],
+            f"f{vt}",
+            lazy.core.change_vt(vt).when(func=lambda: qtile.core.name == "wayland"),
+            desc=f"Switch to VT{vt}",
+        )
+    )
+
 # Workspaces (Groups)
 groups = [Group(i) for i in "12345"]
 
@@ -173,8 +266,8 @@ for i in groups:
 margin = 3
 wrap = False
 
+# REF: https://docs.qtile.org/en/latest/manual/ref/layouts.html#columns
 layouts = [
-    # NOTE: Check out the docs: https://docs.qtile.org/en/latest/manual/ref/layouts.html#columns
     layout.Columns(
         align = 1,
         border_focus = "#cba6f7",
@@ -263,6 +356,7 @@ floating_layout = layout.Floating(
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: list
 
+# Wayland Backend
 wl_input_rules = None
 wl_xcursor_theme = None
 wl_xcursor_size = 24
