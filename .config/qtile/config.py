@@ -9,16 +9,18 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
-# Super Key
-mod = "mod4"
+# Defaults
+mod: str = "mod4"  # Super Key
+terminal: str = guess_terminal()
+browser: str = "firefox"
+file_manager: str = "thunar"
 
-# Default Apps
-terminal = guess_terminal()
-browser = "firefox"
-file_manager = "thunar"
+# Paths
+config_path: str = os.path.expanduser("~/.config")
+local_bin_path: str = os.path.expanduser("~/.local/bin")
 
 # Keybindings
-keys = [
+keys: list[Key] = [
     # Switch between windows.
     Key(
         [mod], "h", 
@@ -130,7 +132,7 @@ keys = [
     ),
     Key(
         [], "Print", 
-        lazy.spawn("capture-screenshot", shell=True), 
+        lazy.spawn(os.path.join(local_bin_path, "capture-screenshot"), shell=True), 
         desc="Capture a screenshot."
     ),
     Key(
@@ -174,14 +176,15 @@ keys = [
     ),
 
     # Screen brightness control.
+    # TIP: Use `brightnessctl info` to get device info.
     Key(
         [], "XF86MonBrightnessDown", 
-        lazy.spawn("brightnessctl set 5%-"), 
+        lazy.spawn("brightnessctl --quiet set 6000-", shell=True), 
         desc="Decrease monitor brightness."
     ),
     Key(
         [], "XF86MonBrightnessUp", 
-        lazy.spawn("brightnessctl set +5%"), 
+        lazy.spawn("brightnessctl --quiet set +6000", shell=True), 
         desc="Increase monitor brightness."
     ),
 
@@ -215,22 +218,22 @@ keys = [
     # Personal rofi scripts.
     Key(
         [mod, "shift"], "m", 
-        lazy.spawn("/home/vik/.config/rofi/scripts/powermenu.sh", shell=True), 
+        lazy.spawn(os.path.join(config_path, "rofi", "scripts", "powermenu.sh"), shell=True),
         desc="Launch rofi to manage power."
     ),
     Key(
         [mod, "shift"], "p", 
-        lazy.spawn("/home/vik/.config/rofi/scripts/kill.sh", shell=True), 
+        lazy.spawn(os.path.join(config_path, "rofi", "scripts", "kill.sh"), shell=True),
         desc="Launch rofi to kill a process."
     ),
     Key(
         [mod], "Print", 
-        lazy.spawn("/home/vik/.config/rofi/scripts/screenshot.sh", shell=True), 
+        lazy.spawn(os.path.join(config_path, "rofi", "scripts", "screenshot.sh"), shell=True),
         desc="Launch rofi to take a screenshot."
     ),
 ]
 
-# VTs in Wayland (?)
+# VTs in Wayland
 for vt in range(1, 8):
     keys.append(
         Key(
@@ -242,7 +245,7 @@ for vt in range(1, 8):
     )
 
 # Workspaces (Groups)
-groups = [Group(i) for i in "12345"]
+groups: list[Group] = [Group(str(i)) for i in range(1, 6)]
 
 for i in groups:
     keys.extend(
@@ -263,11 +266,11 @@ for i in groups:
     )
 
 # Layouts
-margin = 3
-wrap = False
+margin: int = 3
+wrap: bool = False
 
-# REF: https://docs.qtile.org/en/latest/manual/ref/layouts.html#columns
-layouts = [
+# READ: https://docs.qtile.org/en/latest/manual/ref/layouts.html#columns
+layouts: list = [
     layout.Columns(
         align = 1,
         border_focus = "#cba6f7",
@@ -291,7 +294,7 @@ layouts = [
     ),
 ]
 
-screens = [
+screens: list[Screen] = [
     # Equal inner and outer margins of windows.
     Screen(
         top = bar.Gap(margin),
@@ -302,7 +305,7 @@ screens = [
 ]
 
 # Mouse Controls
-mouse = [
+mouse: list = [
     # Drag floating window with mod + left mouse button  hold.
     Drag(
         [mod], "Button1", 
@@ -316,25 +319,27 @@ mouse = [
         start=lazy.window.get_size()
     ),
     # Bring window to the front with mod + middle mouse button.
-    Click([mod], "Button2", lazy.window.bring_to_front()),
+    Click(
+        [mod], "Button2", 
+        lazy.window.bring_to_front()
+    ),
 ]
 
-follow_mouse_focus = False
-bring_front_click = False
-floats_kept_above = True
-cursor_warp = False
+follow_mouse_focus: bool = False
+bring_front_click: bool = False
+floats_kept_above: bool = True
+cursor_warp: bool = False
 
 # Windows
-wmname = "qtile"
-auto_fullscreen = True
-focus_on_window_activation = "smart"
-focus_previous_on_window_remove = False
-reconfigure_screens = True
-auto_minimize = True
+wmname: str = "qtile"
+auto_fullscreen: bool = True
+focus_on_window_activation: str = "smart"
+focus_previous_on_window_remove: bool = False
+reconfigure_screens: bool = True
+auto_minimize: bool = True
 
 # Floating Windows
 # TIP: Use `xprop` to get the wm_class names.
-
 floating_layout = layout.Floating(
     border_focus = "#cba6f7",
     border_normal = "#181825",
@@ -354,15 +359,15 @@ floating_layout = layout.Floating(
 
 # Misc
 dgroups_key_binder = None
-dgroups_app_rules = []  # type: list
+dgroups_app_rules: list = []
 
 # Wayland Backend
 wl_input_rules = None
 wl_xcursor_theme = None
-wl_xcursor_size = 24
+wl_xcursor_size: int = 24
 
 # Autostart Script
 @hook.subscribe.startup_once
 def autostart():
-    script = os.path.expanduser("~/.config/qtile/autostart.sh")
-    subprocess.run([script])
+    autostart_script: str = os.path.join(config_path, "qtile", "autostart.sh")
+    subprocess.run([autostart_script])
