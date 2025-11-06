@@ -48,7 +48,6 @@ export PASSWORD_STORE_GENERATED_LENGTH=20
 export PASSWORD_STORE_CLIP_TIME=30
 
 # Script files
-export PATH="$PATH:$HOME/programming/scripts"
 export PATH="$PATH:$HOME/.local/bin"
 
 # GTK Theme
