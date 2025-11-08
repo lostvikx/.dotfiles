@@ -20,6 +20,7 @@ config_path: str = os.path.expanduser("~/.config")
 local_bin_path: str = os.path.expanduser("~/.local/bin")
 
 # Keybindings
+# DOCS: https://docs.qtile.org/en/latest/manual/config/lazy.html
 keys: list[Key] = [
     # Switch between windows.
     Key(
@@ -269,7 +270,7 @@ for i in groups:
 margin: int = 3
 wrap: bool = False
 
-# READ: https://docs.qtile.org/en/latest/manual/ref/layouts.html#columns
+# DOCS: https://docs.qtile.org/en/latest/manual/ref/layouts.html#columns
 layouts: list = [
     layout.Columns(
         align = 1,
