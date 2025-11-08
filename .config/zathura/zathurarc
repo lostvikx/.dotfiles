@@ -1,0 +1,13 @@
+# Zathura config file
+# DOCS: `man zathurarc`
+
+set adjust-open "best-fit"
+set double-click-follow true
+set pages-per-row 1
+
+set selection-clipboard "clipboard"
+set selection-notification false
+
+set statusbar-basename true  # show only filename
+set statusbar-home-tilde true
+set statusbar-page-percent false
