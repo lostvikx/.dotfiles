@@ -1,4 +1,5 @@
 #!/bin/bash
 
-stow home
+stow -t ~ home
 stow -t ~/.config .config
+cp /etc/ly/config.ini etc/
