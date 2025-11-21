@@ -55,6 +55,3 @@ export GTK_CSD=0
 
 # Rust cargo
 . "$HOME/.cargo/env"
-
-# JupyterLab
-# export JUPYTERLAB_DIR=$HOME/.local/share/jupyter/lab
