@@ -11,7 +11,7 @@ from libqtile.utils import guess_terminal
 
 # Defaults
 mod: str = "mod4"  # Super Key
-terminal: str = guess_terminal()
+terminal: str = guess_terminal() or "kitty"
 browser: str = "firefox"
 file_manager: str = "thunar"
 
@@ -24,77 +24,77 @@ local_bin_path: str = os.path.expanduser("~/.local/bin")
 keys: list[Key] = [
     # Switch between windows.
     Key(
-        [mod], "h", 
-        lazy.layout.left(), 
+        [mod], "h",
+        lazy.layout.left(),
         desc="Move focus to left."
     ),
     Key(
-        [mod], "l", 
-        lazy.layout.right(), 
+        [mod], "l",
+        lazy.layout.right(),
         desc="Move focus to right."
     ),
     Key(
-        [mod], "j", 
-        lazy.layout.down(), 
+        [mod], "j",
+        lazy.layout.down(),
         desc="Move focus down."
     ),
     Key(
-        [mod], "k", 
-        lazy.layout.up(), 
+        [mod], "k",
+        lazy.layout.up(),
         desc="Move focus up."
     ),
     Key(
-        [mod], "space", 
-        lazy.layout.next(), 
+        [mod], "space",
+        lazy.layout.next(),
         desc="Move window focus to other window."
     ),
 
     # Moving window to a new column or row.
     Key(
-        [mod, "shift"], "h", 
-        lazy.layout.shuffle_left(), 
+        [mod, "shift"], "h",
+        lazy.layout.shuffle_left(),
         desc="Move window to the left."
     ),
     Key(
-        [mod, "shift"], "l", 
-        lazy.layout.shuffle_right(), 
+        [mod, "shift"], "l",
+        lazy.layout.shuffle_right(),
         desc="Move window to the right."
     ),
     Key(
-        [mod, "shift"], "j", 
-        lazy.layout.shuffle_down(), 
+        [mod, "shift"], "j",
+        lazy.layout.shuffle_down(),
         desc="Move window down."
     ),
     Key(
-        [mod, "shift"], "k", 
-        lazy.layout.shuffle_up(), 
+        [mod, "shift"], "k",
+        lazy.layout.shuffle_up(),
         desc="Move window up."
     ),
 
     # Grow windows.
     Key(
-        [mod, "control"], "h", 
-        lazy.layout.grow_left(), 
+        [mod, "control"], "h",
+        lazy.layout.grow_left(),
         desc="Grow window to the left."
     ),
     Key(
-        [mod, "control"], "l", 
-        lazy.layout.grow_right(), 
+        [mod, "control"], "l",
+        lazy.layout.grow_right(),
         desc="Grow window to the right."
     ),
     Key(
-        [mod, "control"], "j", 
-        lazy.layout.grow_down(), 
+        [mod, "control"], "j",
+        lazy.layout.grow_down(),
         desc="Grow window down."
     ),
     Key(
-        [mod, "control"], "k", 
-        lazy.layout.grow_up(), 
+        [mod, "control"], "k",
+        lazy.layout.grow_up(),
         desc="Grow window up."
     ),
     Key(
-        [mod], "n", 
-        lazy.layout.normalize(), 
+        [mod], "n",
+        lazy.layout.normalize(),
         desc="Reset all window sizes."
     ),
 
@@ -107,8 +107,8 @@ keys: list[Key] = [
 
     # Other common actions.
     Key(
-        [mod, "shift"], "q", 
-        lazy.window.kill(), 
+        [mod, "shift"], "q",
+        lazy.window.kill(),
         desc="Kill focused window."
     ),
     Key(
@@ -117,92 +117,92 @@ keys: list[Key] = [
         desc="Toggle fullscreen on the focused window."
     ),
     Key(
-        [mod], "y", 
-        lazy.window.toggle_floating(), 
+        [mod], "y",
+        lazy.window.toggle_floating(),
         desc="Toggle floating on the focused window."
     ),
     Key(
-        [mod, "control"], "r", 
-        lazy.reload_config(), 
+        [mod, "control"], "r",
+        lazy.reload_config(),
         desc="Reload the config."
     ),
     Key(
-        [mod, "control"], "q", 
-        lazy.shutdown(), 
+        [mod, "control"], "q",
+        lazy.shutdown(),
         desc="Shutdown Qtile."
     ),
     Key(
-        [], "Print", 
-        lazy.spawn(os.path.join(local_bin_path, "capture-screenshot"), shell=True), 
+        [], "Print",
+        lazy.spawn(os.path.join(local_bin_path, "capture-screenshot"), shell=True),
         desc="Capture a screenshot."
     ),
     Key(
-        [mod], "Escape", 
-        lazy.spawn("betterlockscreen --lock dimblur --off 30", shell=True), 
+        [mod], "Escape",
+        lazy.spawn("betterlockscreen --lock dimblur --off 30", shell=True),
         desc="Lock screen."
     ),
 
     # Launch applications.
     Key(
-        [mod], "Return", 
-        lazy.spawn(terminal), 
+        [mod], "Return",
+        lazy.spawn(terminal),
         desc="Launch terminal."
     ),
     Key(
-        [mod], "b", 
-        lazy.spawn(browser), 
+        [mod], "b",
+        lazy.spawn(browser),
         desc="Launch browser."
     ),
     Key(
-        [mod], "f", 
-        lazy.spawn(file_manager), 
+        [mod], "f",
+        lazy.spawn(file_manager),
         desc="Launch file manager."
     ),
 
     # Audio controls.
     Key(
-        [], "XF86AudioMute", 
-        lazy.spawn("pamixer --toggle-mute"), 
+        [], "XF86AudioMute",
+        lazy.spawn("pamixer --toggle-mute"),
         desc="Mute audio output."
     ),
     Key(
-        [], "XF86AudioLowerVolume", 
-        lazy.spawn("pamixer --unmute --decrease 5"), 
+        [], "XF86AudioLowerVolume",
+        lazy.spawn("pamixer --unmute --decrease 5"),
         desc="Decrease audio output."
     ),
     Key(
-        [], "XF86AudioRaiseVolume", 
-        lazy.spawn("pamixer --unmute --increase 5"), 
+        [], "XF86AudioRaiseVolume",
+        lazy.spawn("pamixer --unmute --increase 5"),
         desc="Increase audio output."
     ),
 
     # Screen brightness control.
     # TIP: Use `brightnessctl info` to get device info.
     Key(
-        [], "XF86MonBrightnessDown", 
-        lazy.spawn("brightnessctl --quiet set 6000-", shell=True), 
+        [], "XF86MonBrightnessDown",
+        lazy.spawn("brightnessctl --quiet set 6000-", shell=True),
         desc="Decrease monitor brightness."
     ),
     Key(
-        [], "XF86MonBrightnessUp", 
-        lazy.spawn("brightnessctl --quiet set +6000", shell=True), 
+        [], "XF86MonBrightnessUp",
+        lazy.spawn("brightnessctl --quiet set +6000", shell=True),
         desc="Increase monitor brightness."
     ),
 
     # Rofi menu system.
     Key(
-        [mod], "r", 
-        lazy.spawn("rofi -show drun"), 
+        [mod], "r",
+        lazy.spawn("rofi -show drun"),
         desc="Launch rofi menu."
     ),
     Key(
-        [mod, "shift"], "r", 
-        lazy.spawn("rofi -show run -no-show-icons"), 
+        [mod, "shift"], "r",
+        lazy.spawn("rofi -show run -no-show-icons"),
         desc="Launch rofi to run commands."
     ),
     Key(
-        [mod], "Tab", 
-        lazy.spawn("rofi -show window"), 
+        [mod], "Tab",
+        lazy.spawn("rofi -show window"),
         desc="Launch rofi to switch windows."
     ),
     Key(
@@ -218,17 +218,17 @@ keys: list[Key] = [
 
     # Personal rofi scripts.
     Key(
-        [mod, "shift"], "m", 
+        [mod, "shift"], "m",
         lazy.spawn(os.path.join(config_path, "rofi", "scripts", "powermenu.sh"), shell=True),
         desc="Launch rofi to manage power."
     ),
     Key(
-        [mod, "shift"], "p", 
+        [mod, "shift"], "p",
         lazy.spawn(os.path.join(config_path, "rofi", "scripts", "kill.sh"), shell=True),
         desc="Launch rofi to kill a process."
     ),
     Key(
-        [mod], "Print", 
+        [mod], "Print",
         lazy.spawn(os.path.join(config_path, "rofi", "scripts", "screenshot.sh"), shell=True),
         desc="Launch rofi to take a screenshot."
     ),
@@ -309,19 +309,19 @@ screens: list[Screen] = [
 mouse: list = [
     # Drag floating window with mod + left mouse button  hold.
     Drag(
-        [mod], "Button1", 
-        lazy.window.set_position_floating(), 
+        [mod], "Button1",
+        lazy.window.set_position_floating(),
         start=lazy.window.get_position()
     ),
     # Resize a floating window with mod + right mouse button hold.
     Drag(
-        [mod], "Button3", 
-        lazy.window.set_size_floating(), 
+        [mod], "Button3",
+        lazy.window.set_size_floating(),
         start=lazy.window.get_size()
     ),
     # Bring window to the front with mod + middle mouse button.
     Click(
-        [mod], "Button2", 
+        [mod], "Button2",
         lazy.window.bring_to_front()
     ),
 ]
