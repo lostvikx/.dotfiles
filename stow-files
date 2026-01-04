@@ -2,4 +2,6 @@
 
 stow -t ~ home
 stow -t ~/.config .config
-cp /etc/ly/config.ini etc/
+
+cp /etc/ly/config.ini etc/ly/
+cp /etc/NetworkManager/conf.d/wifi-powersave.conf etc/NetworkManager/conf.d/
