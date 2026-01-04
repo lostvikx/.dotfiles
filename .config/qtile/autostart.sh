@@ -9,9 +9,10 @@ betterlockscreen --wall
 picom --config ~/.config/picom/picom.conf -b
 redshift -c ~/.config/redshift/redshift.conf &
 
-batsignal -w 20 -c 10 -d 5 -b
+batsignal -w 20 -c 10 -b
 polybar main &
 
 xset s off -dpms
+xset r rate 450 25
 
 #xidlehook --not-when-audio --not-when-fullscreen --timer 300 'betterlockscreen --quiet --lock dimblur' '' &

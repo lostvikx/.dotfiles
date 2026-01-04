@@ -307,7 +307,7 @@ screens: list[Screen] = [
 
 # Mouse Controls
 mouse: list = [
-    # Drag floating window with mod + left mouse button  hold.
+    # Drag floating window with mod + left mouse button hold.
     Drag(
         [mod], "Button1",
         lazy.window.set_position_floating(),
