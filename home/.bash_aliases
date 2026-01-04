@@ -23,7 +23,7 @@ alias copy='xclip -selection clipboard'
 # py venv
 alias py-venv='python -m venv .venv'
 
-# misc 
+# misc
 alias path='echo $PATH | tr ":" "\n"'
 alias now='date -R'
 alias reload='source ~/.bashrc'
@@ -46,3 +46,6 @@ alias trash='mv -t ~/.trash'
 
 # pacman mirrorlist
 alias update-mirrors='sudo reflector $(< ~/.config/reflector/reflector.conf)'
+
+# HDMI Duplicate Display
+alias duplicate-display='xrandr --output eDP-1 --mode 1920x1080 --output HDMI-1 --mode 1920x1080 --same-as eDP-1 --scale-from 1920x1080'

@@ -55,3 +55,6 @@ export GTK_CSD=0
 
 # Rust cargo
 . "$HOME/.cargo/env"
+
+# Gemini API Key
+source "$HOME/.env"
