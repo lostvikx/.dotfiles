@@ -13,6 +13,7 @@ batsignal -w 20 -c 10 -b
 polybar main &
 
 xset s off -dpms
-xset r rate 450 25
+xset r rate 600 25
+# xset r rate 660 25  # default settings
 
 #xidlehook --not-when-audio --not-when-fullscreen --timer 300 'betterlockscreen --quiet --lock dimblur' '' &
