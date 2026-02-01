@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Wait for Wi-Fi connection.
-#sleep 100
-
 # Cache the temperature info for 30 mins.
 cache="/tmp/weather.cache"
 if [[ -f "$cache" && $(find "$cache" -mmin -30) ]]; then
@@ -10,7 +7,10 @@ if [[ -f "$cache" && $(find "$cache" -mmin -30) ]]; then
     exit 0
 fi
 
-# Location: use city or locality name
+# Wait for Wi-Fi connection.
+sleep 100
+
+# Location: use city or locality name.
 places=("Kharghar" "Dehradun" "Delhi" "Chennai")
 location="${places[0]}"
 
@@ -27,16 +27,20 @@ fi
 weather=$(curl -s "https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true")
 
 temp=$(echo $weather | jq -r ".current_weather.temperature")
-temp_int="${temp%.*}"
+temp_int="${temp%.*}"  # Floor the temp value to nearest int.
 
 weather_code=$(echo $weather | jq -r ".current_weather.weathercode")
 is_day=$(echo $weather | jq -r ".current_weather.is_day")
 
 get_icon() {
     case $1 in
-        0) 
-            [[ "$is_day" -eq 1 ]] && echo "" || echo ""
-            ;;                       # Clear sky
+        0)
+            if [[ "$is_day" -eq 1 ]]; then
+                echo ""  # Clear sky (day)
+            else
+                echo ""  # Clear sky (night)
+            fi
+            ;;
         1|2) echo "" ;;             # Partly cloudy
         3) echo "" ;;               # Cloudy
         45|48) echo "" ;;           # Fog
