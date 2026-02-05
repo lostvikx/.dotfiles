@@ -12,9 +12,9 @@ pacman -S stow
 
 Here is a little preview of my system.
 
-Lockscreen|Desktop|
-:-----------------------------------------------:|:--------------------------------------------------:|
-![Lockscreen Screenshot](./assets/lockscreen.png)|![Desktop Environment Screenshot](./assets/rice.png)
+|Lockscreen|Desktop|
+|:-----------------------------------------------:|:-------------------------------------------------:|
+|![Lockscreen Screenshot](./assets/lockscreen.png)|![Desktop Environment Screenshot](./assets/rice.png)
 
 ## Useful Programs
 
@@ -46,6 +46,6 @@ Install these programs to make the config files work properly.
 * `thunar`: Modern, fast and easy-to-use file manager for Xfce
 * `tmux`: Terminal multiplexer
 * `vim`: Vi Improved, a highly configurable, improved version of the vi text editor
-* `vscodium`-bin (AUR): Binary releases of VS Code without MS branding/telemetry/licensing
+* `vscodium-bin` (AUR): Binary releases of VS Code without MS branding/telemetry/licensing
 * `xidlehook` (AUR): xautolock rewrite in Rust, with a few extra features
 * `yt-dlp`: A youtube-dl fork with additional features and fixes
