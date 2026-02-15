@@ -1,8 +1,8 @@
 # Useful bash aliases created by Vikram S. Negi
 
 # list files
-alias la='ls -Alh'
-alias ll='ls -lh'
+alias la='ls -Alh --group-directories-first'
+alias ll='ls -lh --group-directories-first'
 
 # navigation
 alias ..='cd ..'
@@ -13,7 +13,7 @@ alias md='mkdir -p'
 alias battery-status="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
 
 # copy to clipboard (usage: cat file.txt | copy)
-alias copy-clipboard='xclip -selection clipboard >/dev/null 2>&1'
+alias copy='xclip -selection clipboard >/dev/null 2>&1'
 
 # py venv
 alias py-venv='python -m venv .venv'

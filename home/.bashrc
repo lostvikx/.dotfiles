@@ -59,3 +59,6 @@ export GTK_CSD=0
 
 # Gemini API Key
 source "$HOME/.env"
+
+# ls colors
+export LS_COLORS="$(vivid generate catppuccin-mocha)"
