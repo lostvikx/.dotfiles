@@ -1,0 +1,9 @@
+[Unit]
+Description=Send a system update reminder notification
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/notify-send 'System Update Reminder' 'Please update your Arch Linux system.'
+
+[Install]
+WantedBy=default.target

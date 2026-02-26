@@ -1,0 +1,10 @@
+[Unit]
+Description=Run the update reminder every Friday at 8:00 PM
+
+[Timer]
+# Format: DayOfWeek Year-Month-Day Hour:Minute:Second
+OnCalendar=Fri *-*-* 20:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
