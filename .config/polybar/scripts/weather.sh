@@ -8,7 +8,7 @@ if [[ -f "$cache" && $(find "$cache" -mmin -30) ]]; then
 fi
 
 # Wait for Wi-Fi connection.
-sleep 100
+#sleep 100
 
 # Location: use city or locality name.
 places=("Kharghar" "Dehradun" "Delhi" "Chennai")
@@ -26,16 +26,18 @@ fi
 
 weather=$(curl -s "https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true")
 
-temp=$(echo $weather | jq -r ".current_weather.temperature")
+temp=$(echo "$weather" | jq -r ".current_weather.temperature")
 temp_int="${temp%.*}"  # Floor the temp value to nearest int.
 
-weather_code=$(echo $weather | jq -r ".current_weather.weathercode")
-is_day=$(echo $weather | jq -r ".current_weather.is_day")
+weather_code=$(echo "$weather" | jq -r ".current_weather.weathercode")
+
+is_day=$(echo "$weather" | jq -r ".current_weather.is_day")
+is_day_int="${is_day%.*}"
 
 get_icon() {
     case $1 in
         0)
-            if [[ "$is_day" -eq 1 ]]; then
+            if [[ "$is_day_int" -eq 1 ]]; then
                 echo ""  # Clear sky (day)
             else
                 echo ""  # Clear sky (night)
@@ -58,5 +60,5 @@ icon=$(get_icon "$weather_code")
 if [[ -z "$temp" ]]; then
     echo '%{F#707880}N/A%{F-}'
 else
-    echo "%{T2}${icon}%{T-} ${temp_int}°C" | tee $cache
+    echo "%{T2}${icon}%{T-} ${temp_int}°C" | tee "$cache"
 fi
