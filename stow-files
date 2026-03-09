@@ -5,3 +5,5 @@ stow -t ~/.config .config
 
 cp /etc/ly/config.ini etc/ly/
 cp /etc/NetworkManager/conf.d/wifi-powersave.conf etc/NetworkManager/conf.d/
+
+xrdb -merge ~/.Xresources
