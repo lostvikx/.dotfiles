@@ -39,8 +39,11 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias trash='mv -t ~/.trash'
 
-# pacman mirrorlist
+# update pacman mirrorlist
 alias update-mirrors='sudo reflector $(< ~/.config/reflector/reflector.conf)'
 
 # HDMI Duplicate Display
 alias duplicate-display='xrandr --output eDP-1 --mode 1920x1080 --output HDMI-1 --mode 1920x1080 --same-as eDP-1 --scale-from 1920x1080'
+
+# run open-webui
+alias run-open-webui='DATA_DIR=~/.open-webui uvx --python 3.11 open-webui@latest serve'
