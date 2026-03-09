@@ -1,0 +1,10 @@
+# Set the theme (use 'bat --list-themes' to see options)
+--theme="Catppuccin Mocha"
+
+# Show line numbers, Git status, and file headers
+--style="changes,grid,header,header-filename,header-filesize,snip"
+
+# Treat ".env" files as Shell scripts for better highlighting
+--map-syntax ".env:sh"
+--map-syntax "*.ino:C++"
+--map-syntax ".ignore:Git Ignore"
