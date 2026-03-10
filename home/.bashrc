@@ -1,64 +1,67 @@
-#
-# ~/.bashrc
-#
+# ~/.bashrc file created by Vikram S. Negi
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Bash shell options: history
+shopt -s histappend
+shopt -s cmdhist
+shopt -s lithist
+
+# Bash shell options: navigation
+shopt -s autocd
+shopt -s cdspell
+
+# Bash shell options: terminal
+shopt -s checkwinsize
+
+# Bash history
+HISTSIZE=5000
+HISTFILESIZE=10000
 HISTCONTROL=ignoreboth
-HISTSIZE=2000
-HISTFILESIZE=2000
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+[ -f ~/.env ] && . ~/.env
+[ -f ~/.api_keys ] && . ~/.api_keys
+[ -f ~/.bash_aliases ] && . ~/.bash_aliases
 
-if [ -f ~/.api_keys ]; then
-    . ~/.api_keys
-fi
-
-[ $TERM = 'xterm-kitty' ] && alias ssh='kitty +kitten ssh'
-
-export PYTHONDONTWRITEBYTECODE=1
-export EDITOR='vim'
+# Rust cargo
+. "$HOME/.cargo/env"
 
 # Colors in terminal
 case "$TERM" in
     xterm-color | *-256color | xterm-kitty) color_prompt=yes;;
 esac
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
+# PS1
 
 if [ "$color_prompt" = "yes" ]; then
-    #PS1='[\[\033[32m\]\u\[\033[37m\]@\[\033[31m\]\h \[\033[34m\]\w\[\033[0m\]] \n\$ '
-    PS1='[\[\033[32m\]\u\[\033[37m\]@\[\033[31m\]\h \[\033[34m\]\w\[\033[33m\] ($?)\[\033[0m\]] \n\$ '
+    GREEN='\[\033[32m\]'
+    WHITE='\[\033[37m\]'
+    RED='\[\033[31m\]'
+    BLUE='\[\033[34m\]'
+    YELLOW='\[\033[33m\]'
+    RESET='\[\033[0m\]'
+
+    PS1="[${GREEN}\u${WHITE}@${RED}\h ${BLUE}\w${YELLOW} (\$?)${RESET}]\n\$ "
 else
     PS1='[\u@\h \w] \n\$ '
 fi
 
-# Default PS1
-# PS1='[\u@\h \W] \$ '
-
-# Refer the Arch Wiki: https://wiki.archlinux.org/title/Kitty#Terminal_issues_with_SSH
 [ $TERM = 'xterm-kitty' ] && alias ssh='kitty +kitten ssh'
 
-# Password Store
+# Environment variables
+export EDITOR='vim'
+
+# Disable __pycache__
+export PYTHONDONTWRITEBYTECODE=1
+
+# Password store
 export PASSWORD_STORE_CHARACTER_SET='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*'
 export PASSWORD_STORE_GENERATED_LENGTH=20
 export PASSWORD_STORE_CLIP_TIME=30
 
-# Script files
+# Personal script files
 export PATH="$PATH:$HOME/.local/bin"
 
-# GTK Theme
-export GTK_CSD=0
-
-# Rust cargo
-. "$HOME/.cargo/env"
-
-# Gemini API Key
-source "$HOME/.env"
-
-# ls colors
+# Colors of ls
 export LS_COLORS="$(vivid generate catppuccin-mocha)"

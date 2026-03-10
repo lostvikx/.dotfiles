@@ -1,16 +1,24 @@
 # Useful bash aliases created by Vikram S. Negi
 
 # list files
+alias ls='ls --color=auto'
 alias la='ls -Alh --group-directories-first'
 alias ll='ls -lh --group-directories-first'
+
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
 
 # navigation
 alias ..='cd ..'
 alias cls='clear'
-alias md='mkdir -p'
+alias mkd='mkdir -p'
 
 # display info
-alias battery-status="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
+alias battery-status='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 
 # copy to clipboard (usage: cat file.txt | copy)
 alias copy='xclip -selection clipboard >/dev/null 2>&1'
@@ -25,13 +33,13 @@ alias reload='source ~/.bashrc'
 alias weather-report='curl -s https://wttr.in/'
 
 # youtube download
-alias yt-play="mpv --profile=1080p --fs"
-alias yt-video-download="yt-dlp --config-locations ~/.config/yt-dlp/yt-dlp-config.conf"
-alias yt-music-download="yt-dlp --config-locations ~/.config/yt-dlp/music-config.conf"
+alias yt-play='mpv --profile=1080p --fs'
+alias yt-video-download='yt-dlp --config-locations ~/.config/yt-dlp/yt-dlp-config.conf'
+alias yt-music-download='yt-dlp --config-locations ~/.config/yt-dlp/music-config.conf'
 
 # tools
 alias catppuccin='lutgen apply --palette catppuccin-mocha'
-alias myip='curl https://checkip.amazonaws.com'
+alias my-ip='curl https://checkip.amazonaws.com'
 
 # safety mechanisms
 alias rm='rm -I'
@@ -42,8 +50,8 @@ alias trash='mv -t ~/.trash'
 # update pacman mirrorlist
 alias update-mirrors='sudo reflector $(< ~/.config/reflector/reflector.conf)'
 
-# HDMI Duplicate Display
-alias duplicate-display='xrandr --output eDP-1 --mode 1920x1080 --output HDMI-1 --mode 1920x1080 --same-as eDP-1 --scale-from 1920x1080'
+# mirror display on hdmi
+alias hdmi-mirror='xrandr --output eDP-1 --mode 1920x1080 --output HDMI-1 --mode 1920x1080 --same-as eDP-1 --scale-from 1920x1080'
 
-# run open-webui
-alias run-open-webui='DATA_DIR=~/.open-webui uvx --python 3.11 open-webui@latest serve'
+# open-webui
+alias open-webui-app='DATA_DIR=~/.open-webui uvx --python 3.11 open-webui@latest serve'
