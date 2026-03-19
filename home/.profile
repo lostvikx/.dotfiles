@@ -8,3 +8,10 @@ export XDG_CONFIG_HOME="${HOME}/.config"
 
 # GTK Theme
 export GTK_CSD=0
+
+# Hardware Video Acceleration
+export LIBVA_DRIVER_NAME=iHD
+
+# Setup bun Runtime
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
