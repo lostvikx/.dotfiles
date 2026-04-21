@@ -51,7 +51,8 @@ alias trash='mv -t ~/.trash'
 alias update-mirrors='sudo reflector $(< ~/.config/reflector/reflector.conf)'
 
 # mirror display on hdmi
-alias hdmi-mirror='xrandr --output eDP-1 --mode 1920x1080 --output HDMI-1 --mode 1920x1080 --same-as eDP-1 --scale-from 1920x1080'
+alias hdmi-mirror='xrandr --output eDP-1 --mode 1920x1080 --output HDMI-1 --mode 1920x1080 --same-as eDP-1'
+alias hdmi-extend='xrandr --output eDP-1 --mode 1920x1080 --output HDMI-1 --mode 1920x1080 --right-of eDP-1'
 
 # open-webui
 alias open-webui-app='DATA_DIR=~/.open-webui uvx --python 3.11 open-webui@latest serve'
