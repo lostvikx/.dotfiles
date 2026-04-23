@@ -2,6 +2,7 @@
 
 import os
 import subprocess
+import time
 
 import libqtile.resources
 from libqtile import bar, hook, layout, qtile, widget
@@ -15,9 +16,11 @@ terminal: str = guess_terminal() or "kitty"
 browser: str = "firefox"
 file_manager: str = "thunar"
 
+
 # Paths
 config_path: str = os.path.expanduser("~/.config")
 local_bin_path: str = os.path.expanduser("~/.local/bin")
+
 
 # Keybindings
 # DOCS: https://docs.qtile.org/en/latest/manual/config/lazy.html
@@ -176,6 +179,7 @@ keys: list[Key] = [
     ),
 ]
 
+
 # VTs in Wayland
 for vt in range(1, 8):
     keys.append(
@@ -187,28 +191,61 @@ for vt in range(1, 8):
         )
     )
 
-# Workspaces (Groups)
-groups: list[Group] = [Group(str(i)) for i in range(1, 6)]
 
-for i in groups:
+# Workspaces (Groups)
+groups: list[Group] = []
+
+n_monitors: int = sum(
+    " connected" in line and "+" in line
+    for line in subprocess.check_output(["xrandr"]).decode().splitlines()
+)
+
+if n_monitors == 2:
+    # Multi-Monitor Setup
+    pinned_groups: list[str] = ["12345", "67890"]
+    all_groups: str = "".join(pinned_groups)
+
+    groups = [Group(i) for i in all_groups]
+
+    for screen_idx, names in enumerate(pinned_groups):
+        for i in names:
+            keys.append(
+                Key(
+                    [mod],
+                    i,
+                    lazy.to_screen(screen_idx),
+                    lazy.group[i].toscreen(toggle=False),
+                    desc=f"Switch monitor and switch to group {i}",
+                )
+            )
+
     keys.extend(
-        [
-            # mod + group number = switch to group
-            Key(
-                [mod],
-                i.name,
-                lazy.group[i.name].toscreen(),
-                desc=f"Switch to group {i.name}",
-            ),
-            # mod + shift + group number = switch to & move focused window to group
-            Key(
-                [mod, "shift"],
-                i.name,
-                lazy.window.togroup(i.name, switch_group=True),
-                desc=f"Switch to & move focused window to group {i.name}",
-            ),
-        ]
+        Key([mod, "shift"], i, lazy.window.togroup(i, switch_group=False))
+        for i in all_groups
     )
+else:
+    groups = [Group(str(i)) for i in range(1, 6)]
+
+    for i in groups:
+        keys.extend(
+            [
+                # mod + group number = switch to group
+                Key(
+                    [mod],
+                    i.name,
+                    lazy.group[i.name].toscreen(),
+                    desc=f"Switch to group {i.name}",
+                ),
+                # mod + shift + group number = switch to & move focused window to group
+                Key(
+                    [mod, "shift"],
+                    i.name,
+                    lazy.window.togroup(i.name, switch_group=True),
+                    desc=f"Switch to & move focused window to group {i.name}",
+                ),
+            ]
+        )
+
 
 # Layouts
 margin: int = 3
@@ -239,21 +276,16 @@ layouts: list = [
     ),
 ]
 
-screens: list[Screen] = [
-    # Equal inner and outer margins of windows.
-    Screen(
-        top=bar.Gap(margin),
-        right=bar.Gap(margin),
-        bottom=bar.Gap(margin),
-        left=bar.Gap(margin),
-    ),
-    Screen(
-        top=bar.Gap(margin),
-        right=bar.Gap(margin),
-        bottom=bar.Gap(margin),
-        left=bar.Gap(margin),
-    ),
-]
+screens = []
+for i in range(n_monitors):
+    screens.append(
+        Screen(
+            top=bar.Gap(margin),
+            right=bar.Gap(margin),
+            bottom=bar.Gap(margin),
+            left=bar.Gap(margin),
+        )
+    )
 
 # Mouse Controls
 mouse: list = [
@@ -277,6 +309,7 @@ bring_front_click: bool = False
 floats_kept_above: bool = True
 cursor_warp: bool = False
 
+
 # Windows
 wmname: str = "qtile"
 auto_fullscreen: bool = True
@@ -284,6 +317,7 @@ focus_on_window_activation: str = "smart"
 focus_previous_on_window_remove: bool = False
 reconfigure_screens: bool = True
 auto_minimize: bool = True
+
 
 # Floating Windows
 # TIP: Use `xprop` to get the wm_class names.
@@ -304,9 +338,11 @@ floating_layout = layout.Floating(
     max_border_width=0,
 )
 
+
 # Misc
 dgroups_key_binder = None
 dgroups_app_rules: list = []
+
 
 # Wayland Backend
 wl_input_rules = None

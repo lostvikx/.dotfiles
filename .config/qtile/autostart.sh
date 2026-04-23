@@ -10,7 +10,12 @@ picom --config ~/.config/picom/picom.conf -b
 redshift -c ~/.config/redshift/redshift.conf &
 
 batsignal -w 20 -c 10 -b
-polybar main &
+
+# polybar main &
+
+for m in $(xrandr --query | grep " connected" | cut -d" " -f1);
+    do MONITOR=$m polybar --reload main &
+done
 
 xset s off -dpms
 xset r rate 600 25
