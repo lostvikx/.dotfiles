@@ -2,15 +2,27 @@
 
 import os
 import subprocess
-import time
+from collections.abc import Callable
 
 import libqtile.resources
 from libqtile import bar, hook, layout, qtile, widget
-from libqtile.config import Click, Drag, Group, Key, Match, Screen
+from libqtile.config import (
+    Click,
+    Drag,
+    Group,
+    IdleInhibitor,
+    IdleTimer,
+    Key,
+    Match,
+    Output,
+    Screen,
+)
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 # Defaults
+# TODO: Wayland
+# Install: foot
 mod: str = "mod4"  # Super Key
 terminal: str = guess_terminal() or "kitty"
 browser: str = "firefox"
@@ -64,6 +76,7 @@ keys: list[Key] = [
         desc="Toggle between split and unsplit sides of stack.",
     ),
     # Other common actions.
+    Key([mod], "z", lazy.next_layout(), desc="Toggle between layouts."),
     Key([mod, "shift"], "q", lazy.window.kill(), desc="Kill focused window."),
     Key(
         [mod, "shift"],
@@ -129,6 +142,8 @@ keys: list[Key] = [
         desc="Increase monitor brightness.",
     ),
     # Rofi menu system.
+    # TODO: Wayland support missing.
+    # Install: fuzzel
     Key([mod], "r", lazy.spawn("rofi -show drun"), desc="Launch rofi menu."),
     Key(
         [mod, "shift"],
@@ -195,6 +210,8 @@ for vt in range(1, 8):
 # Workspaces (Groups)
 groups: list[Group] = []
 
+# TODO: Wayland support missing.
+# Install wlr-randr
 n_monitors: int = sum(
     " connected" in line and "+" in line
     for line in subprocess.check_output(["xrandr"]).decode().splitlines()
@@ -248,19 +265,42 @@ else:
 
 
 # Layouts
+border_width: int = 2
+colors: dict = {"primary": "#cba6f7", "secondary": "#fab387", "dark": "#181825"}
 margin: int = 3
 wrap: bool = False
+
+
+# Floating Windows
+# TIP: Use `xprop` or `wlprop` to get the wm_class names.
+
+floating_layout = layout.Floating(
+    border_focus=colors.get("primary"),
+    border_normal=colors.get("dark"),
+    border_width=border_width,
+    float_rules=[
+        *layout.Floating.default_float_rules,
+        Match(wm_class="confirmreset"),
+        Match(wm_class="makebranch"),
+        Match(wm_class="maketag"),
+        Match(wm_class="ssh-askpass"),
+        Match(title="branchdialog"),
+        Match(wm_class="pinentry-gtk"),
+    ],
+    fullscreen_border_width=0,
+    max_border_width=0,
+)
 
 # DOCS: https://docs.qtile.org/en/latest/manual/ref/layouts.html#columns
 layouts: list = [
     layout.Columns(
         align=1,
-        border_focus="#cba6f7",
-        border_focus_stack="#fab387",
-        border_normal="#181825",
-        border_normal_stack="#181825",
+        border_focus=colors.get("primary"),
+        border_focus_stack=colors.get("secondary"),
+        border_normal=colors.get("dark"),
+        border_normal_stack=colors.get("dark"),
         border_on_single=True,
-        border_width=2,
+        border_width=border_width,
         fair=False,
         grow_amount=10,
         initial_ratio=1,
@@ -286,6 +326,9 @@ for i in range(n_monitors):
             left=bar.Gap(margin),
         )
     )
+
+fake_screens: list[Screen]
+generate_screens: Callable[[list[Output]], list[Screen]]
 
 # Mouse Controls
 mouse: list = [
@@ -319,26 +362,6 @@ reconfigure_screens: bool = True
 auto_minimize: bool = True
 
 
-# Floating Windows
-# TIP: Use `xprop` to get the wm_class names.
-floating_layout = layout.Floating(
-    border_focus="#cba6f7",
-    border_normal="#181825",
-    border_width=2,
-    float_rules=[
-        *layout.Floating.default_float_rules,
-        Match(wm_class="confirmreset"),
-        Match(wm_class="makebranch"),
-        Match(wm_class="maketag"),
-        Match(wm_class="ssh-askpass"),
-        Match(title="branchdialog"),
-        Match(wm_class="pinentry-gtk"),
-    ],
-    fullscreen_border_width=0,
-    max_border_width=0,
-)
-
-
 # Misc
 dgroups_key_binder = None
 dgroups_app_rules: list = []
@@ -349,8 +372,13 @@ wl_input_rules = None
 wl_xcursor_theme = None
 wl_xcursor_size: int = 24
 
+# Idle Events
+idle_timers: list[IdleTimer] = []
+idle_inhibitors: list[IdleInhibitor] = []
+
 
 # Autostart Script
+# TODO: Fix the autostart script.
 @hook.subscribe.startup_once
 def autostart():
     autostart_script: str = os.path.join(config_path, "qtile", "autostart.sh")
