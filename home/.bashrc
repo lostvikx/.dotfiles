@@ -29,7 +29,7 @@ HISTCONTROL=ignoreboth
 
 # Colors in terminal
 case "$TERM" in
-    xterm-color | *-256color | xterm-kitty) color_prompt=yes;;
+    xterm-color | *-256color | xterm-kitty | foot) color_prompt=yes;;
 esac
 
 # PS1

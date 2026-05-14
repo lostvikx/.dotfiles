@@ -19,6 +19,7 @@ alias mkd='mkdir -p'
 
 # display info
 alias battery-status='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
+alias tlp-status='tlp-stat -s'
 
 # copy to clipboard (usage: cat file.txt | copy)
 alias copy='xclip -selection clipboard >/dev/null 2>&1'
@@ -57,3 +58,9 @@ alias hdmi-off='xrandr --output eDP-1 --primary --auto --output HDMI-1 --off'
 
 # open-webui
 alias open-webui-app='DATA_DIR=~/.open-webui uvx --python 3.11 open-webui@latest serve'
+
+# sshd
+alias sshd-start='sudo systemctl start sshd'
+alias sshd-stop='sudo systemctl stop sshd'
+alias sshd-restart='sudo systemctl restart sshd'
+alias sshd-status='systemctl status sshd'
