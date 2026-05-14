@@ -4,17 +4,55 @@
 //!HEIGHT OUTPUT.h
 //!DESC CRT Lottes
 
-// Parameters
-#define HARD_SCAN -8.0
-#define CURVATURE vec2(0.0, 0.0)
-#define MASK_DARK 0.5
-#define MASK_LIGHT 1.5
-#define SHADOW_MASK 1
-#define BRIGHTNESS_BOOST 1.0
-#define HARD_BLOOM_SCAN -2.0
-#define BLOOM_AMOUNT (1.0/16.0)
-#define SHAPE 2.0
+// Notes - Parameters
 
+// Scanline sharpness | Typical range: (-4, -16)
+// More negative → sharper, thinner scanlines.
+// Closer to 0 → softer, blurrier scanlines
+
+// Screen curvature
+// Higher values → More curved edges.
+// X = horizontal curvature | Y = vertical curvature
+//#define CURVATURE vec2(0.03, 0.04)
+
+// Dark intensity
+// Lower value → darker phosphor gaps
+// Higher value → less contrast in mask
+
+// Brightness of the phosphor stripes
+// Higher value → brighter RGB subpixels
+// Too high → unnatural oversaturation
+
+// Selects shadow mask pattern type.
+// Values: [0: No mask, 1: Standard RGB , 2: Aperture grille, 3: Slot mask, 4: Variant]
+
+// Global brightness multiplier
+// Scanlines + mask darken the image, so this compensates.
+// 1.0 → No boost
+
+// Sharpness of bloom scanlines
+// More negative → tighter glow
+// Less negative → softer glow
+
+// Intensity of the glow/bleeding between scanlines.
+// Higher → stronger CRT glow
+// Lower → cleaner image
+
+// Controls pixel/beam falloff shape.
+// 2.0 → Gaussian-like (natural CRT look)
+// Lower → boxier
+// Higher → sharper beam edges
+
+// Parameters
+#define HARD_SCAN -13.5
+#define CURVATURE vec2(0.00, 0.00)
+#define MASK_DARK 0.2
+#define MASK_LIGHT 1.15
+#define SHADOW_MASK 2
+#define BRIGHTNESS_BOOST 1.08
+#define HARD_BLOOM_SCAN -2.5
+#define BLOOM_AMOUNT (1.0/28.0)
+#define SHAPE 3.2
 
 #ifndef linearize
 // Implementation from mpv's gpu-next
