@@ -4,7 +4,6 @@ dunst -config ~/.config/dunst/dunstrc &
 
 # set the wallpaper
 betterlockscreen --wall
-#feh -zr ~/Pictures/walls/ --bg-fill --no-fehbg  # random wallpaper
 
 picom --config ~/.config/picom/picom.conf -b
 redshift -c ~/.config/redshift/redshift.conf &
@@ -19,4 +18,3 @@ done
 
 xset s off -dpms
 xset r rate 600 25
-# xset r rate 660 25  # default settings

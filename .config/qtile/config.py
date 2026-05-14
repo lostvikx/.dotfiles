@@ -5,7 +5,9 @@ import subprocess
 from collections.abc import Callable
 
 import libqtile.resources
+from helper import get_battery, get_volume, get_wifi_icon, trim_window_name
 from libqtile import bar, hook, layout, qtile, widget
+from libqtile.backend.wayland.inputs import InputConfig
 from libqtile.config import (
     Click,
     Drag,
@@ -19,14 +21,19 @@ from libqtile.config import (
 )
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
+from libqtile.widget import backlight
 
-# Defaults
-# TODO: Wayland
-# Install: foot
 mod: str = "mod4"  # Super Key
-terminal: str = guess_terminal() or "kitty"
+is_wayland: bool = qtile.core.name == "wayland"
+
+# Default Apps
 browser: str = "firefox"
 file_manager: str = "thunar"
+
+terminal: str = guess_terminal() or "kitty"
+
+if is_wayland:
+    terminal = "foot"
 
 
 # Paths
@@ -98,6 +105,7 @@ keys: list[Key] = [
         lazy.spawn(os.path.join(local_bin_path, "capture-screenshot"), shell=True),
         desc="Capture a screenshot.",
     ),
+    # TODO: Wayland
     Key(
         [mod],
         "Escape",
@@ -133,66 +141,83 @@ keys: list[Key] = [
         [],
         "XF86MonBrightnessDown",
         lazy.spawn("brightnessctl --quiet set 6000-", shell=True),
+        lazy.widget["backlight"].change_backlight(backlight.ChangeDirection.DOWN),
         desc="Decrease monitor brightness.",
     ),
     Key(
         [],
         "XF86MonBrightnessUp",
         lazy.spawn("brightnessctl --quiet set +6000", shell=True),
+        lazy.widget["backlight"].change_backlight(backlight.ChangeDirection.UP),
         desc="Increase monitor brightness.",
     ),
-    # Rofi menu system.
-    # TODO: Wayland support missing.
-    # Install: fuzzel
-    Key([mod], "r", lazy.spawn("rofi -show drun"), desc="Launch rofi menu."),
-    Key(
-        [mod, "shift"],
-        "r",
-        lazy.spawn("rofi -show run -no-show-icons"),
-        desc="Launch rofi to run commands.",
-    ),
-    Key(
-        [mod],
-        "Tab",
-        lazy.spawn("rofi -show window"),
-        desc="Launch rofi to switch windows.",
-    ),
-    Key(
-        [mod, "shift"],
-        "e",
-        lazy.spawn("rofi -modi emoji -show emoji"),
-        desc="Launch rofi to pick an emoji.",
-    ),
-    Key(
-        [mod, "shift"],
-        "c",
-        lazy.spawn("rofi -show calc -no-show-match -no-sort", shell=True),
-        desc="Launch rofi to perform calculations.",
-    ),
-    # Personal rofi scripts.
-    Key(
-        [mod, "shift"],
-        "m",
-        lazy.spawn(
-            os.path.join(config_path, "rofi", "scripts", "powermenu.sh"), shell=True
-        ),
-        desc="Launch rofi to manage power.",
-    ),
-    Key(
-        [mod, "shift"],
-        "p",
-        lazy.spawn(os.path.join(config_path, "rofi", "scripts", "kill.sh"), shell=True),
-        desc="Launch rofi to kill a process.",
-    ),
-    Key(
-        [mod],
-        "Print",
-        lazy.spawn(
-            os.path.join(config_path, "rofi", "scripts", "screenshot.sh"), shell=True
-        ),
-        desc="Launch rofi to take a screenshot.",
-    ),
 ]
+
+
+if is_wayland:
+    keys.extend(
+        [
+            Key([mod], "r", lazy.spawn("fuzzel"), desc="Launch fuzzel menu."),
+        ]
+    )
+else:
+    # Menu: rofi
+    keys.extend(
+        [
+            Key([mod], "r", lazy.spawn("rofi -show drun"), desc="Launch rofi menu."),
+            Key(
+                [mod, "shift"],
+                "r",
+                lazy.spawn("rofi -show run -no-show-icons"),
+                desc="Launch rofi to run commands.",
+            ),
+            Key(
+                [mod],
+                "Tab",
+                lazy.spawn("rofi -show window"),
+                desc="Launch rofi to switch windows.",
+            ),
+            Key(
+                [mod, "shift"],
+                "e",
+                lazy.spawn("rofi -modi emoji -show emoji"),
+                desc="Launch rofi to pick an emoji.",
+            ),
+            Key(
+                [mod, "shift"],
+                "c",
+                lazy.spawn("rofi -show calc -no-show-match -no-sort", shell=True),
+                desc="Launch rofi to perform calculations.",
+            ),
+            # Personal rofi scripts.
+            Key(
+                [mod, "shift"],
+                "m",
+                lazy.spawn(
+                    os.path.join(config_path, "rofi", "scripts", "powermenu.sh"),
+                    shell=True,
+                ),
+                desc="Launch rofi to manage power.",
+            ),
+            Key(
+                [mod, "shift"],
+                "p",
+                lazy.spawn(
+                    os.path.join(config_path, "rofi", "scripts", "kill.sh"), shell=True
+                ),
+                desc="Launch rofi to kill a process.",
+            ),
+            Key(
+                [mod],
+                "Print",
+                lazy.spawn(
+                    os.path.join(config_path, "rofi", "scripts", "screenshot.sh"),
+                    shell=True,
+                ),
+                desc="Launch rofi to take a screenshot.",
+            ),
+        ]
+    )
 
 
 # VTs in Wayland
@@ -201,7 +226,7 @@ for vt in range(1, 8):
         Key(
             ["control", "mod1"],
             f"f{vt}",
-            lazy.core.change_vt(vt).when(func=lambda: qtile.core.name == "wayland"),
+            lazy.core.change_vt(vt).when(func=lambda: is_wayland),
             desc=f"Switch to VT{vt}",
         )
     )
@@ -210,12 +235,13 @@ for vt in range(1, 8):
 # Workspaces (Groups)
 groups: list[Group] = []
 
-# TODO: Wayland support missing.
+# TODO: Wayland
 # Install wlr-randr
-n_monitors: int = sum(
-    " connected" in line and "+" in line
-    for line in subprocess.check_output(["xrandr"]).decode().splitlines()
-)
+# n_monitors: int = sum(
+#     " connected" in line and "+" in line
+#     for line in subprocess.check_output(["xrandr"]).decode().splitlines()
+# )
+n_monitors = 1
 
 if n_monitors == 2:
     # Multi-Monitor Setup
@@ -314,7 +340,96 @@ layouts: list = [
         wrap_focus_rows=wrap,
         wrap_focus_stacks=wrap,
     ),
+    layout.Floating(
+        border_focus=colors.get("primary"),
+        border_normal=colors.get("dark"),
+        border_width=border_width,
+    ),
 ]
+
+widget_defaults = dict(
+    font="JetBrainsMono Nerd Font",
+    fontsize=15,
+    foreground="#CDD6F4",
+    background="#1E1E2E",
+    padding=margin + 3,
+)
+extension_defaults = widget_defaults.copy()
+logo = os.path.join(os.path.dirname(libqtile.resources.__file__), "logo.png")
+
+mocha = dict(
+    background=widget_defaults["background"],
+    background_alt="#313244",
+    foreground=widget_defaults["foreground"],
+    primary="#CBA6F7",
+    secondary="#F5C2E7",
+    alert="#F38BA8",
+    disabled="#6C7086",
+)
+
+separator = widget.Sep(padding=18, linewidth=border_width, foreground=mocha["disabled"])
+menu = widget.TextBox(
+    text="󰣇",
+    foreground=mocha["primary"],
+    padding=6,
+    mouse_callbacks={"Button1": lazy.spawn("fuzzel")},
+)
+
+
+bottom_bar = bar.Bar(
+    widgets=[
+        # menu,
+        widget.GroupBox(
+            active=mocha["foreground"],
+            disable_drag=True,
+            block_highlight_text_color=mocha["primary"],
+            highlight_color=[mocha["background_alt"], "282828"],
+            highlight_method="line",
+            inactive=mocha["disabled"],
+            other_current_screen_border=mocha["disabled"],
+            this_current_screen_border=mocha["primary"],
+            this_screen_border=mocha["primary"],
+            urgent_alert_method="line",
+            urgent_border=mocha["alert"],
+            urgent_text=mocha["alert"],
+            use_mouse_wheel=False,
+        ),
+        separator,
+        widget.WindowName(
+            empty_group_string="No Active Window",
+            parse_text=trim_window_name,
+        ),
+        widget.StatusNotifier(icon_theme="Papirus"),
+        separator,
+        widget.ThermalZone(
+            crit=80,
+            format=" {temp}°C",
+            format_crit=" {temp}°C",
+            high=70,
+            update_interval=60,
+            fgcolor_normal=mocha["foreground"],
+            fgcolor_high=mocha["secondary"],
+            fgcolor_crit=mocha["alert"],
+        ),
+        separator,
+        widget.GenPollText(func=get_wifi_icon, update_interval=30),
+        widget.WlanIw(disconnected_message="No Wi-Fi", format="{essid}"),
+        separator,
+        widget.Backlight(format="󰛩 {percent:2.0%}"),
+        separator,
+        # widget.TextBox(text="󰕾"),
+        # widget.Volume(),
+        # widget.GenPollText(func=get_volume, update_interval=0.2),
+        # widget.PulseVolume(),
+        # separator,
+        widget.GenPollText(func=get_battery, update_interval=30),
+        separator,
+        widget.Clock(format="%a %b %d %H:%M"),
+    ],
+    size=26,
+    margin=[margin, 0, 0, 0],  # Fixed
+)
+
 
 screens = []
 for i in range(n_monitors):
@@ -322,7 +437,7 @@ for i in range(n_monitors):
         Screen(
             top=bar.Gap(margin),
             right=bar.Gap(margin),
-            bottom=bar.Gap(margin),
+            bottom=bottom_bar if is_wayland else bar.Gap(margin),
             left=bar.Gap(margin),
         )
     )
@@ -368,7 +483,10 @@ dgroups_app_rules: list = []
 
 
 # Wayland Backend
-wl_input_rules = None
+wl_input_rules = {
+    "type:touchpad": InputConfig(tap=True, natural_scroll=True),
+    "type:keyboard": InputConfig(kb_layout="us"),
+}
 wl_xcursor_theme = None
 wl_xcursor_size: int = 24
 
@@ -377,9 +495,16 @@ idle_timers: list[IdleTimer] = []
 idle_inhibitors: list[IdleInhibitor] = []
 
 
-# Autostart Script
-# TODO: Fix the autostart script.
 @hook.subscribe.startup_once
 def autostart():
-    autostart_script: str = os.path.join(config_path, "qtile", "autostart.sh")
+    autostart_script: str
+    if is_wayland:
+        autostart_script = os.path.join(
+            config_path, "qtile", "scripts", "autostart_wl.sh"
+        )
+    else:
+        autostart_script = os.path.join(
+            config_path, "qtile", "scripts", "autostart_x11.sh"
+        )
+
     subprocess.run([autostart_script])
