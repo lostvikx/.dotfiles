@@ -64,3 +64,6 @@ alias sshd-start='sudo systemctl start sshd'
 alias sshd-stop='sudo systemctl stop sshd'
 alias sshd-restart='sudo systemctl restart sshd'
 alias sshd-status='systemctl status sshd'
+
+# esrgan ai upscaler
+alias ai-upscaler='~/.local/opt/realesrgan/realesrgan-ncnn-vulkan'
