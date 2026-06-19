@@ -1,11 +1,10 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "model": "google/gemini-flash-latest",
-  "small_model": "google/gemini-flash-lite-latest",
   "autoupdate": true,
   "permission": {
     "bash": "ask",
-    "edit": "ask",
+    "edit": "allow",
     "webfetch": "allow"
   },
   "provider": {
