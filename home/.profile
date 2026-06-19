@@ -3,8 +3,11 @@ export QT_SCALE_FACTOR=1.10
 export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_QPA_FONTDIR="/usr/share/fonts/TTF"
 
-# Config Directory
+# XDG Base Directory
 export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_STATE_HOME="${HOME}/.local/state"
+export XDG_CACHE_HOME="${HOME}/.cache"
 
 # GTK Theme
 export GTK_CSD=0
