@@ -1,8 +1,7 @@
-__pycache__
-
+*.bak
 *.db
 *.log
 *.pid
 *.state
 
-shaders.bak/
+__pycache__/
