@@ -66,5 +66,8 @@ export PATH="$PATH:$HOME/.local/bin"
 # Colors of ls
 export LS_COLORS="$(vivid generate catppuccin-mocha)"
 
-# opencode
-export PATH=/home/vik/.opencode/bin:$PATH
+# OpenCode
+export PATH="/home/vik/.opencode/bin:$PATH"
+
+# Java
+export JAVA_HOME="/usr/lib/jvm/default"

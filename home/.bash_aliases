@@ -67,3 +67,6 @@ alias sshd-status='systemctl status sshd'
 
 # esrgan ai upscaler
 alias ai-upscaler='~/.local/opt/realesrgan/realesrgan-ncnn-vulkan'
+
+# vscodium
+alias code='vscodium'
