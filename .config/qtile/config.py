@@ -99,12 +99,6 @@ keys: list[Key] = [
     ),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config."),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile."),
-    Key(
-        [],
-        "Print",
-        lazy.spawn(os.path.join(local_bin_path, "capture-screenshot"), shell=True),
-        desc="Capture a screenshot.",
-    ),
     # TODO: Wayland
     Key(
         [mod],
@@ -155,9 +149,35 @@ keys: list[Key] = [
 
 
 if is_wayland:
+    screenshot_tool: str = os.path.join(local_bin_path, "screenshot")
+
     keys.extend(
         [
             Key([mod], "r", lazy.spawn("fuzzel"), desc="Launch fuzzel menu."),
+            Key(
+                [mod],
+                "Print",
+                lazy.spawn(f"{screenshot_tool} area", shell=True),
+                desc="Capture area screenshot.",
+            ),
+            Key(
+                [],
+                "Print",
+                lazy.spawn(f"{screenshot_tool} full", shell=True),
+                desc="Capture full screenshot.",
+            ),
+            Key(
+                [mod, "shift"],
+                "Print",
+                lazy.spawn(f"{screenshot_tool} copy", shell=True),
+                desc="Copy area screenshot.",
+            ),
+            Key(
+                [mod, "control"],
+                "Print",
+                lazy.spawn(f"{screenshot_tool} save-copy", shell=True),
+                desc="Save and copy full screenshot.",
+            ),
         ]
     )
 else:
@@ -347,25 +367,25 @@ layouts: list = [
     ),
 ]
 
-widget_defaults = dict(
-    font="JetBrainsMono Nerd Font",
-    fontsize=15,
-    foreground="#CDD6F4",
-    background="#1E1E2E",
-    padding=margin + 3,
-)
+widget_defaults = {
+    "font": "JetBrainsMono Nerd Font",
+    "fontsize": 15,
+    "foreground": "#CDD6F4",
+    "background": "#1E1E2E",
+    "padding": margin + 3,
+}
 extension_defaults = widget_defaults.copy()
 logo = os.path.join(os.path.dirname(libqtile.resources.__file__), "logo.png")
 
-mocha = dict(
-    background=widget_defaults["background"],
-    background_alt="#313244",
-    foreground=widget_defaults["foreground"],
-    primary="#CBA6F7",
-    secondary="#F5C2E7",
-    alert="#F38BA8",
-    disabled="#6C7086",
-)
+mocha = {
+    "background": widget_defaults["background"],
+    "background_alt": "#313244",
+    "foreground": widget_defaults["foreground"],
+    "primary": "#CBA6F7",
+    "secondary": "#F5C2E7",
+    "alert": "#F38BA8",
+    "disabled": "#6C7086",
+}
 
 separator = widget.Sep(padding=18, linewidth=border_width, foreground=mocha["disabled"])
 menu = widget.TextBox(
@@ -412,17 +432,17 @@ bottom_bar = bar.Bar(
             fgcolor_crit=mocha["alert"],
         ),
         separator,
-        widget.GenPollText(func=get_wifi_icon, update_interval=30),
+        widget.GenPollText(func=get_wifi_icon, update_interval=60),
         widget.WlanIw(disconnected_message="No Wi-Fi", format="{essid}"),
         separator,
         widget.Backlight(format="󰛩 {percent:2.0%}"),
         separator,
         # widget.TextBox(text="󰕾"),
         # widget.Volume(),
-        # widget.GenPollText(func=get_volume, update_interval=0.2),
         # widget.PulseVolume(),
-        # separator,
-        widget.GenPollText(func=get_battery, update_interval=30),
+        widget.GenPollText(func=get_volume, update_interval=0.2),
+        separator,
+        widget.GenPollText(func=get_battery, update_interval=60),
         separator,
         widget.Clock(format="%a %b %d %H:%M"),
     ],
@@ -507,4 +527,4 @@ def autostart():
             config_path, "qtile", "scripts", "autostart_x11.sh"
         )
 
-    subprocess.run([autostart_script])
+    subprocess.run([autostart_script], check=False)

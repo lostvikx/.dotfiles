@@ -6,7 +6,7 @@ def get_wifi_icon():
         output = subprocess.check_output("iw dev wlan0 link", shell=True).decode()
 
         if "signal" not in output:
-            return "󰤭 Disconnected"
+            return "󰤯"
 
         signal = int(output.split("signal:")[1].split("dBm")[0].strip())
 
@@ -35,7 +35,7 @@ def get_battery():
         base = "/sys/class/power_supply/BAT0/"
 
         with open(base + "capacity") as f:
-            percent = int(f.read().strip())
+            percent = int(f.read().strip()) - 1
 
         with open(base + "status") as f:
             status = f.read().strip().lower()
