@@ -99,13 +99,6 @@ keys: list[Key] = [
     ),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config."),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile."),
-    # TODO: Wayland
-    Key(
-        [mod],
-        "Escape",
-        lazy.spawn("betterlockscreen --lock dimblur --off 30", shell=True),
-        desc="Lock screen.",
-    ),
     # Launch applications.
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal."),
     Key([mod], "b", lazy.spawn(browser), desc="Launch browser."),
@@ -149,8 +142,8 @@ keys: list[Key] = [
 
 
 if is_wayland:
+    # Screenshot tool
     screenshot_tool: str = os.path.join(local_bin_path, "screenshot")
-
     keys.extend(
         [
             Key([mod], "r", lazy.spawn("fuzzel"), desc="Launch fuzzel menu."),
@@ -177,6 +170,17 @@ if is_wayland:
                 "Print",
                 lazy.spawn(f"{screenshot_tool} save-copy", shell=True),
                 desc="Save and copy full screenshot.",
+            ),
+        ]
+    )
+    # Lockscreen
+    keys.extend(
+        [
+            Key(
+                [mod],
+                "Escape",
+                lazy.spawn("swaylock -f -i ~/Pictures/lockscreen.jpg", shell=True),
+                desc="Lockscreen.",
             ),
         ]
     )
@@ -235,6 +239,17 @@ else:
                     shell=True,
                 ),
                 desc="Launch rofi to take a screenshot.",
+            ),
+        ]
+    )
+    # Lockscreen
+    keys.extend(
+        [
+            Key(
+                [mod],
+                "Escape",
+                lazy.spawn("betterlockscreen --lock dimblur --off 30", shell=True),
+                desc="Lockscreen.",
             ),
         ]
     )
@@ -437,9 +452,6 @@ bottom_bar = bar.Bar(
         separator,
         widget.Backlight(format="󰛩 {percent:2.0%}"),
         separator,
-        # widget.TextBox(text="󰕾"),
-        # widget.Volume(),
-        # widget.PulseVolume(),
         widget.GenPollText(func=get_volume, update_interval=0.2),
         separator,
         widget.GenPollText(func=get_battery, update_interval=60),
@@ -507,7 +519,7 @@ wl_input_rules = {
     "type:touchpad": InputConfig(tap=True, natural_scroll=True),
     "type:keyboard": InputConfig(kb_layout="us"),
 }
-wl_xcursor_theme = None
+wl_xcursor_theme: str = "Adwaita"
 wl_xcursor_size: int = 24
 
 # Idle Events

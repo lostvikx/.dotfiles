@@ -35,7 +35,10 @@ def get_battery():
         base = "/sys/class/power_supply/BAT0/"
 
         with open(base + "capacity") as f:
-            percent = int(f.read().strip()) - 1
+            percent = int(f.read().strip())
+
+        if percent > 98:
+            percent = 100
 
         with open(base + "status") as f:
             status = f.read().strip().lower()
@@ -83,15 +86,14 @@ def get_volume():
         if mute:
             return "󰖁 Mute"
 
-        # Icon levels (Nerd Fonts)
         if vol == 0:
-            icon = "󰕿"  # muted/zero
+            icon = "󰕿"
         elif vol < 30:
-            icon = "󰖀"  # low
+            icon = "󰖀"
         elif vol < 70:
-            icon = "󰕾"  # medium
+            icon = "󰕾"
         else:
-            icon = "󰕾"  # high (you can swap if you prefer louder icon)
+            icon = "󰕾"
 
         return f"{icon} {vol}%"
 
