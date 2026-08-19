@@ -45,82 +45,80 @@ local_bin_path: str = os.path.expanduser("~/.local/bin")
 # DOCS: https://docs.qtile.org/en/latest/manual/config/lazy.html
 keys: list[Key] = [
     # Switch between windows.
-    Key([mod], "h", lazy.layout.left(), desc="Move focus to left."),
-    Key([mod], "l", lazy.layout.right(), desc="Move focus to right."),
-    Key([mod], "j", lazy.layout.down(), desc="Move focus down."),
-    Key([mod], "k", lazy.layout.up(), desc="Move focus up."),
-    Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window."),
+    Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
+    Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
+    Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
+    Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
+    Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
     # Moving window to a new column or row.
     Key(
-        [mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left."
+        [mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"
     ),
     Key(
         [mod, "shift"],
         "l",
         lazy.layout.shuffle_right(),
-        desc="Move window to the right.",
+        desc="Move window to the right",
     ),
-    Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down."),
-    Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up."),
+    Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
+    Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
     # Grow windows.
-    Key(
-        [mod, "control"], "h", lazy.layout.grow_left(), desc="Grow window to the left."
-    ),
+    Key([mod, "control"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
     Key(
         [mod, "control"],
         "l",
         lazy.layout.grow_right(),
-        desc="Grow window to the right.",
+        desc="Grow window to the right",
     ),
-    Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down."),
-    Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up."),
-    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes."),
+    Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down"),
+    Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
+    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
     # Toggle between split and unsplit sides of stack.
     Key(
         [mod],
         "s",
         lazy.layout.toggle_split(),
-        desc="Toggle between split and unsplit sides of stack.",
+        desc="Toggle between split and unsplit sides of stack",
     ),
     # Other common actions.
-    Key([mod], "z", lazy.next_layout(), desc="Toggle between layouts."),
-    Key([mod, "shift"], "q", lazy.window.kill(), desc="Kill focused window."),
+    Key([mod], "z", lazy.next_layout(), desc="Toggle between layouts"),
+    Key([mod, "shift"], "q", lazy.window.kill(), desc="Kill focused window"),
     Key(
         [mod, "shift"],
         "f",
         lazy.window.toggle_fullscreen(),
-        desc="Toggle fullscreen on the focused window.",
+        desc="Toggle fullscreen on the focused window",
     ),
     Key(
         [mod],
         "y",
         lazy.window.toggle_floating(),
-        desc="Toggle floating on the focused window.",
+        desc="Toggle floating on the focused window",
     ),
-    Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config."),
-    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile."),
+    Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
+    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     # Launch applications.
-    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal."),
-    Key([mod], "b", lazy.spawn(browser), desc="Launch browser."),
-    Key([mod], "f", lazy.spawn(file_manager), desc="Launch file manager."),
+    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+    Key([mod], "b", lazy.spawn(browser), desc="Launch browser"),
+    Key([mod], "f", lazy.spawn(file_manager), desc="Launch file manager"),
     # Audio controls.
     Key(
         [],
         "XF86AudioMute",
         lazy.spawn("pamixer --toggle-mute"),
-        desc="Mute audio output.",
+        desc="Mute audio output",
     ),
     Key(
         [],
         "XF86AudioLowerVolume",
         lazy.spawn("pamixer --unmute --decrease 5"),
-        desc="Decrease audio output.",
+        desc="Decrease audio output",
     ),
     Key(
         [],
         "XF86AudioRaiseVolume",
         lazy.spawn("pamixer --unmute --increase 5"),
-        desc="Increase audio output.",
+        desc="Increase audio output",
     ),
     # Screen brightness control.
     # TIP: Use `brightnessctl info` to get device info.
@@ -129,14 +127,14 @@ keys: list[Key] = [
         "XF86MonBrightnessDown",
         lazy.spawn("brightnessctl --quiet set 6000-", shell=True),
         lazy.widget["backlight"].change_backlight(backlight.ChangeDirection.DOWN),
-        desc="Decrease monitor brightness.",
+        desc="Decrease monitor brightness",
     ),
     Key(
         [],
         "XF86MonBrightnessUp",
         lazy.spawn("brightnessctl --quiet set +6000", shell=True),
         lazy.widget["backlight"].change_backlight(backlight.ChangeDirection.UP),
-        desc="Increase monitor brightness.",
+        desc="Increase monitor brightness",
     ),
 ]
 
@@ -146,30 +144,30 @@ if is_wayland:
     screenshot_tool: str = os.path.join(local_bin_path, "screenshot")
     keys.extend(
         [
-            Key([mod], "r", lazy.spawn("fuzzel"), desc="Launch fuzzel menu."),
+            Key([mod], "r", lazy.spawn("fuzzel"), desc="Launch fuzzel menu"),
             Key(
                 [mod],
                 "Print",
                 lazy.spawn(f"{screenshot_tool} area", shell=True),
-                desc="Capture area screenshot.",
+                desc="Capture area screenshot",
             ),
             Key(
                 [],
                 "Print",
                 lazy.spawn(f"{screenshot_tool} full", shell=True),
-                desc="Capture full screenshot.",
+                desc="Capture full screenshot",
             ),
             Key(
                 [mod, "shift"],
                 "Print",
                 lazy.spawn(f"{screenshot_tool} copy", shell=True),
-                desc="Copy area screenshot.",
+                desc="Copy area screenshot",
             ),
             Key(
                 [mod, "control"],
                 "Print",
                 lazy.spawn(f"{screenshot_tool} save-copy", shell=True),
-                desc="Save and copy full screenshot.",
+                desc="Save and copy full screenshot",
             ),
         ]
     )
@@ -180,7 +178,7 @@ if is_wayland:
                 [mod],
                 "Escape",
                 lazy.spawn("swaylock -f -i ~/Pictures/lockscreen.jpg", shell=True),
-                desc="Lockscreen.",
+                desc="Lockscreen",
             ),
         ]
     )
@@ -188,30 +186,30 @@ else:
     # Menu: rofi
     keys.extend(
         [
-            Key([mod], "r", lazy.spawn("rofi -show drun"), desc="Launch rofi menu."),
+            Key([mod], "r", lazy.spawn("rofi -show drun"), desc="Launch rofi menu"),
             Key(
                 [mod, "shift"],
                 "r",
                 lazy.spawn("rofi -show run -no-show-icons"),
-                desc="Launch rofi to run commands.",
+                desc="Launch rofi to run commands",
             ),
             Key(
                 [mod],
                 "Tab",
                 lazy.spawn("rofi -show window"),
-                desc="Launch rofi to switch windows.",
+                desc="Launch rofi to switch windows",
             ),
             Key(
                 [mod, "shift"],
                 "e",
                 lazy.spawn("rofi -modi emoji -show emoji"),
-                desc="Launch rofi to pick an emoji.",
+                desc="Launch rofi to pick an emoji",
             ),
             Key(
                 [mod, "shift"],
                 "c",
                 lazy.spawn("rofi -show calc -no-show-match -no-sort", shell=True),
-                desc="Launch rofi to perform calculations.",
+                desc="Launch rofi to perform calculations",
             ),
             # Personal rofi scripts.
             Key(
@@ -221,7 +219,7 @@ else:
                     os.path.join(config_path, "rofi", "scripts", "powermenu.sh"),
                     shell=True,
                 ),
-                desc="Launch rofi to manage power.",
+                desc="Launch rofi to manage power",
             ),
             Key(
                 [mod, "shift"],
@@ -229,7 +227,7 @@ else:
                 lazy.spawn(
                     os.path.join(config_path, "rofi", "scripts", "kill.sh"), shell=True
                 ),
-                desc="Launch rofi to kill a process.",
+                desc="Launch rofi to kill a process",
             ),
             Key(
                 [mod],
@@ -238,7 +236,7 @@ else:
                     os.path.join(config_path, "rofi", "scripts", "screenshot.sh"),
                     shell=True,
                 ),
-                desc="Launch rofi to take a screenshot.",
+                desc="Launch rofi to take a screenshot",
             ),
         ]
     )
@@ -249,7 +247,7 @@ else:
                 [mod],
                 "Escape",
                 lazy.spawn("betterlockscreen --lock dimblur --off 30", shell=True),
-                desc="Lockscreen.",
+                desc="Lockscreen",
             ),
         ]
     )
@@ -270,13 +268,14 @@ for vt in range(1, 8):
 # Workspaces (Groups)
 groups: list[Group] = []
 
-# TODO: Wayland
-# Install wlr-randr
-# n_monitors: int = sum(
-#     " connected" in line and "+" in line
-#     for line in subprocess.check_output(["xrandr"]).decode().splitlines()
-# )
-n_monitors = 1
+# TODO: Install wlr-randr
+if is_wayland:
+    n_monitors = 1
+else:
+    n_monitors: int = sum(
+        " connected" in line and "+" in line
+        for line in subprocess.check_output(["xrandr"]).decode().splitlines()
+    )
 
 if n_monitors == 2:
     # Multi-Monitor Setup
@@ -519,7 +518,7 @@ wl_input_rules = {
     "type:touchpad": InputConfig(tap=True, natural_scroll=True),
     "type:keyboard": InputConfig(kb_layout="us"),
 }
-wl_xcursor_theme: str = "Adwaita"
+wl_xcursor_theme = None
 wl_xcursor_size: int = 24
 
 # Idle Events
