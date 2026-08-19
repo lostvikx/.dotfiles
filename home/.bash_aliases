@@ -32,6 +32,7 @@ alias path='echo $PATH | tr ":" "\n"'
 alias now='date -R'
 alias reload='source ~/.bashrc'
 alias weather-report='curl -s https://wttr.in/'
+alias rsync='rsync -ahv --progress'
 
 # youtube download
 alias yt-play='mpv --profile=1080p --fs'

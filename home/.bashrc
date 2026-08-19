@@ -47,6 +47,7 @@ else
     PS1='[\u@\h \w] \n\$ '
 fi
 
+# For kitty terminal
 [ $TERM = 'xterm-kitty' ] && alias ssh='kitty +kitten ssh'
 
 # Environment variables

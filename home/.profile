@@ -20,7 +20,7 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Cursor
-export XCURSOR_THEME=Adwaita
+#export XCURSOR_THEME=Adwaita
 export XCURSOR_SIZE=24
 
 # Wayland
