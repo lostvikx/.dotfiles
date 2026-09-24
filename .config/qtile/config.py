@@ -451,7 +451,12 @@ bottom_bar = bar.Bar(
         separator,
         widget.Backlight(format="󰛩 {percent:2.0%}"),
         separator,
-        widget.GenPollText(func=get_volume, update_interval=0.2),
+        widget.PulseVolume(
+            emoji=False,
+            emoji_list=["󰖁 Mute", "󰕿", "󰖀", "󰕾"],
+            fmt="󰕾 {}",
+            mute_format="Mute",
+        ),
         separator,
         widget.GenPollText(func=get_battery, update_interval=60),
         separator,

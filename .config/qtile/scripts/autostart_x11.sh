@@ -3,7 +3,7 @@
 dunst -config ~/.config/dunst/dunstrc &
 
 # set the wallpaper
-betterlockscreen --wall
+#betterlockscreen --wall
 
 picom --config ~/.config/picom/picom.conf -b
 redshift -c ~/.config/redshift/redshift.conf &
@@ -16,5 +16,5 @@ for m in $(xrandr --query | grep " connected" | cut -d" " -f1);
     do MONITOR=$m polybar --reload main &
 done
 
-xset s off -dpms
-xset r rate 600 25
+#xset s off -dpms
+#xset r rate 600 25
