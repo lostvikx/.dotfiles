@@ -72,3 +72,4 @@ export PATH="/home/vik/.opencode/bin:$PATH"
 
 # Java
 export JAVA_HOME="/usr/lib/jvm/default"
+exec fish
