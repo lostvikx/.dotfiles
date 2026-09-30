@@ -520,7 +520,10 @@ dgroups_app_rules: list = []
 
 # Wayland Backend
 wl_input_rules = {
-    "type:touchpad": InputConfig(tap=True, natural_scroll=True),
+    "type:pointer": InputConfig(accel_profile="flat", pointer_accel=0.0),
+    "type:touchpad": InputConfig(
+        accel_profile="adaptive", tap=True, natural_scroll=True
+    ),
     "type:keyboard": InputConfig(kb_layout="us"),
 }
 wl_xcursor_theme = None
