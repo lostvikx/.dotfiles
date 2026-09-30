@@ -29,3 +29,7 @@ export GDK_BACKEND=wayland
 export MOZ_ENABLE_WAYLAND=1
 export CLUTTER_BACKEND=wayland
 export SDL_VIDEODRIVER=wayland
+
+# Opencode
+export OPENCODE_ENABLE_EXA=1
+#export OPENCODE_ENABLE_PARALLEL=1
