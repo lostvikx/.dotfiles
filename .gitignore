@@ -3,6 +3,7 @@
 *.log
 *.pid
 *.state
+*.tmp
 
 __pycache__/
 .config/superfile/theme/
