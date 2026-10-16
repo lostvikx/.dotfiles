@@ -1,0 +1,13 @@
+gtk-engine-murrine
+i3lock-color
+lib32-mpg123
+lib32-nvidia-580xx-utils
+lib32-opencl-nvidia-580xx
+nvidia-580xx-dkms
+nvidia-580xx-utils
+opencl-nvidia-580xx
+python-pulsectl
+python-pulsectl-asyncio
+python-pywlroots
+vscodium-bin
+vscodium-bin-debug
