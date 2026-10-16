@@ -101,6 +101,14 @@ keys: list[Key] = [
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "b", lazy.spawn(browser), desc="Launch browser"),
     Key([mod], "f", lazy.spawn(file_manager), desc="Launch file manager"),
+    Key(
+        [mod],
+        "t",
+        lazy.spawn(
+            "flatpak run --command=io.github.alainm23.planify.quick-add io.github.alainm23.planify"
+        ),
+        desc="Create a todo in Planify",
+    ),
     # Audio controls.
     Key(
         [],
