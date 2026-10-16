@@ -24,11 +24,16 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export XCURSOR_SIZE=24
 
 # Wayland
-export QT_QPA_PLATFORM=wayland
-export GDK_BACKEND=wayland
-export MOZ_ENABLE_WAYLAND=1
-export CLUTTER_BACKEND=wayland
-export SDL_VIDEODRIVER=wayland
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+    export QT_QPA_PLATFORM=wayland
+    export GDK_BACKEND=wayland
+    export MOZ_ENABLE_WAYLAND=1
+    export CLUTTER_BACKEND=wayland
+    export SDL_VIDEODRIVER=wayland
+    export XDG_CURRENT_DESKTOP=qtile
+    #export XDG_CURRENT_DESKTOP=wlroots
+    export _JAVA_AWT_WM_NONREPARENTING=1
+fi
 
 # Opencode
 export OPENCODE_ENABLE_EXA=1

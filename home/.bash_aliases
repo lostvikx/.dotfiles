@@ -22,10 +22,7 @@ alias battery-status='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias tlp-status='tlp-stat -s'
 
 # copy to clipboard (usage: cat file.txt | copy)
-alias copy='xclip -selection clipboard >/dev/null 2>&1'
-
-# py venv
-alias py-venv='python -m venv .venv'
+alias x-copy='xclip -selection clipboard >/dev/null 2>&1'
 
 # misc
 alias path='echo $PATH | tr ":" "\n"'
@@ -59,6 +56,9 @@ alias hdmi-off='xrandr --output eDP-1 --primary --auto --output HDMI-1 --off'
 
 # open-webui
 alias open-webui-app='DATA_DIR=~/.open-webui uvx --python 3.11 open-webui@latest serve'
+
+# uv
+alias uv-init="uv init --no-package"
 
 # sshd
 alias sshd-start='sudo systemctl start sshd'
