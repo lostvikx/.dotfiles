@@ -1,10 +1,16 @@
 ---
 description: Reviews code for quality and best practices
 mode: subagent
-temperature: 0.1
-permission:
-  edit: deny
-  bash: deny
+request:
+  body:
+    temperature: 0.1
+permissions:
+  - action: edit
+    resource: "*"
+    effect: deny
+  - action: shell
+    resource: "*"
+    effect: deny
 ---
 
 You are in code review mode. Focus on:
