@@ -1,8 +1,9 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "openrouter/stealth/space-bunny-alpha",
+  "model": "opencode/deepseek-v4.1-flash-free",
   "update": "auto",
   "formatter": true,
+  "experimental": { "todo": true },
   "permissions": [
     { "action": "shell", "resource": "*", "effect": "allow" },
     { "action": "edit", "resource": "*", "effect": "allow" },
@@ -33,20 +34,18 @@
     "auto": true
   },
   "watcher": {
-    "ignore": [
-      "node_modules/**",
-      "dist/**",
-      ".git/**"
-    ]
+    "ignore": ["node_modules/**", "dist/**", ".git/**"]
   },
   "mcp": {
     "servers": {
       "playwright": {
         "type": "local",
-        "command": [
-          "npx",
-          "@playwright/mcp@latest"
-        ],
+        "command": ["npx", "@playwright/mcp@latest"],
+        "disabled": true
+      },
+      "chrome-devtools": {
+        "type": "local",
+        "command": ["npx", "-y", "chrome-devtools-mcp@latest"],
         "disabled": true
       },
       "context7": {
