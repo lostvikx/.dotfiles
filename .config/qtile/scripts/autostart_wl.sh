@@ -1,7 +1,9 @@
 #!/bin/sh
 
+dbus-update-activation-environment --systemd \
+    WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE
+
 dunst -config ~/.config/dunst/dunstrc &
-#swaybg -i ~/Pictures/background.png -m fill &
 swaybg -i ~/Pictures/background.jpg -m center -c '#11111b' &
 wlsunset -T 6500 -t 3500 -S 05:00 -s 21:00 -d 3600 &
 batsignal -w 20 -c 10 -b

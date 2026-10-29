@@ -5,7 +5,7 @@ import subprocess
 from collections.abc import Callable
 
 import libqtile.resources
-from helper import get_battery, get_volume, get_wifi_icon, trim_window_name
+from helper import get_battery, get_wifi_icon, trim_window_name
 from libqtile import bar, hook, layout, qtile, widget
 from libqtile.backend.wayland.inputs import InputConfig
 from libqtile.config import (

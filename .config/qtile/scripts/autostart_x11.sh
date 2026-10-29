@@ -4,6 +4,7 @@ dunst -config ~/.config/dunst/dunstrc &
 
 # set the wallpaper
 #betterlockscreen --wall
+feh --bg-center ~/Pictures/background.jpg --image-bg '#11111b' &
 
 picom --config ~/.config/picom/picom.conf -b
 redshift -c ~/.config/redshift/redshift.conf &
