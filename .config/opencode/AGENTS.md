@@ -1,24 +1,50 @@
-# Project Context & Agent Directives
+# Global Agent Directives
 
-## Core Rules
+## Core
 
-* Keep responses concise and actionable; avoid unnecessary explanation.
-* Prefer small, incremental diffs over large changes.
-* Do not assume architecture, patterns, dependencies, or features. Ask when requirements are unclear.
-* Use `context7` for documentation lookup.
-* Use `gh_grep` to find relevant GitHub implementations when unsure how something should be done.
+- Be concise and actionable; omit filler.
+- Make the smallest change that fully solves the task; prefer incremental diffs.
+- Match existing patterns, style, and utilities. Avoid new abstractions or dependencies without a clear reason.
+- Do not assume architecture, behavior, or conventions. Inspect the code first; ask when requirements are unclear.
+- Preserve unrelated and uncommitted work. Investigate unfamiliar files before changing or deleting them.
 
 ## Planning
 
-* Clarify ambiguous requirements, scope, or feature behavior before planning.
-* Use read-only background agents (e.g. `@scout`, `@explore`) to investigate the codebase, dependencies, and existing patterns.
-* Review and validate the plan with background agents before presenting it.
-* Keep planning proportional to the task; avoid unnecessary planning for trivial changes.
+- Clarify scope, behavior, and constraints before planning non-trivial work.
+- Investigate first: search the codebase, read relevant files, and check dependencies and configuration.
+- Use read-only subagents (e.g. `explore`) for context-heavy research; keep the main context focused.
+- Scale planning to the task. For non-trivial changes, share a short plan and assumptions before editing.
 
 ## Implementation
 
-* Prefer existing project patterns and utilities over introducing new abstractions.
-* Delegate complex implementation work to specialized sub-agents when appropriate.
-* Keep the primary agent focused by offloading research, exploration, and other context-heavy work to read-only sub-agents.
-* Make the smallest change that fully solves the task.
-* Verify changes with appropriate tests, checks, or builds before considering the task complete.
+- Delegate complex or parallelizable work to specialized subagents when it helps.
+- Keep edits scoped; avoid drive-by refactors and unrelated formatting changes.
+- Do not add dependencies, generated files, or documentation unless asked or clearly required.
+
+## Verification
+
+- Run the narrowest relevant checks (tests, typecheck, lint, build) and fix failures caused by your change.
+- Do not fix unrelated failures; report them.
+- If the project has no checks, validate syntax/config with the appropriate parser and state what could not be verified.
+- Use the `review` subagent for a second pass on non-trivial diffs when useful.
+- Never claim success without evidence. In the final response, summarize what changed, where, and how it was verified.
+
+## Safety
+
+- Never commit, push, create branches, or rewrite history unless explicitly asked.
+- Never run destructive commands. Ask before deleting files or taking other irreversible/high-impact actions.
+- Never print, commit, or expose secrets (API keys, tokens, `.env` contents). Use environment variables.
+
+## Tooling
+
+- Use `context7` for current library and framework documentation.
+- Use `gh_grep` for real-world implementation examples when local patterns are insufficient.
+- Prefer repository evidence over memory; use web search for current information.
+
+## GitHub
+
+- Use `gh` for PR, issue, review, and Actions context: `gh pr list/view/diff`, `gh issue list/view`, `gh run list/view`.
+- Read-only queries are fine. Ask before mutations: creating, editing, commenting on, closing, or merging PRs/issues, or pushing branches.
+- Never merge or close a PR/issue without explicit confirmation.
+- Prefer repository templates and `--body-file` for longer PR/issue bodies; link related issues.
+- Never echo tokens or credentials from `gh auth status`.
