@@ -30,8 +30,7 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
     export MOZ_ENABLE_WAYLAND=1
     export CLUTTER_BACKEND=wayland
     export SDL_VIDEODRIVER=wayland
-    export XDG_CURRENT_DESKTOP=qtile
-    #export XDG_CURRENT_DESKTOP=wlroots
+    export XDG_CURRENT_DESKTOP=wlroots
     export _JAVA_AWT_WM_NONREPARENTING=1
 fi
 
