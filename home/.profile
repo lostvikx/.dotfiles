@@ -28,6 +28,7 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
     export QT_QPA_PLATFORM=wayland
     export GDK_BACKEND=wayland
     export MOZ_ENABLE_WAYLAND=1
+    export MOZ_REMOTE_DEBUGGING_AGENT=1
     export CLUTTER_BACKEND=wayland
     export SDL_VIDEODRIVER=wayland
     export XDG_CURRENT_DESKTOP=wlroots
