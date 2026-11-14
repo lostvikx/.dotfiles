@@ -21,6 +21,15 @@
 - Keep edits scoped; avoid drive-by refactors and unrelated formatting changes.
 - Do not add dependencies, generated files, or documentation unless asked or clearly required.
 
+## Subagents
+
+- Delegate when a task benefits from isolated context, parallel execution, or a specialist role. Handle small, single-file edits in the main agent.
+- Route by strength: `explore` for read-only codebase and web research, `general` for multi-step work in parallel, `data-scientist` for dataset inspection and statistical analysis, `docs-writer` for READMEs, API docs, docstrings, and changelogs.
+- Respect each agent's access: `code-reviewer` and `data-scientist` cannot edit files; `docs-writer` cannot run commands.
+- Pass the context each subagent needs in its prompt. It starts with a fresh context and never sees the parent conversation.
+- Subagents always run in the background. Continue with non-overlapping work and do not poll for results.
+- Do not delegate work that is faster to do directly, and never launch two subagents that would edit the same files.
+
 ## Verification
 
 - Run the narrowest relevant checks (tests, typecheck, lint, build) and fix failures caused by your change.
