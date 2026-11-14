@@ -13,16 +13,38 @@
     "view": "auto"
   },
   "terminal": {
-    "title": true
+    "title": true,
+    "copy": "select"
   },
   "session": {
     "sidebar": "auto",
     "scrollbar": false,
-    "thinking": "hide"
+    "thinking": "hide",
+    "grouping": "auto",
+    "verbosity": "medium",
+    "new_location": "launch",
+    "permissions": "prompt"
   },
   "cursor": {
     "blinking": false
   },
   "animations": true,
-  "mouse": true
+  "mouse": true,
+  "tabs": {
+    "mode": "auto",
+    "layout": "horizontal",
+    "indicators": "status"
+  },
+  "prompt": {
+    "paste": "compact",
+    "image_preview": true
+  },
+  "attention": {
+    "notifications": true,
+    "sound": false,
+    "volume": 0.5
+  },
+  "debug": {
+    "devtools": false
+  }
 }
