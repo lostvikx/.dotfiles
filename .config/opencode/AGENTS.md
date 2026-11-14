@@ -26,7 +26,7 @@
 - Run the narrowest relevant checks (tests, typecheck, lint, build) and fix failures caused by your change.
 - Do not fix unrelated failures; report them.
 - If the project has no checks, validate syntax/config with the appropriate parser and state what could not be verified.
-- Use the `review` subagent for a second pass on non-trivial diffs when useful.
+- Use the `code-reviewer` subagent for a second pass on non-trivial diffs when useful.
 - Never claim success without evidence. In the final response, summarize what changed, where, and how it was verified.
 
 ## Safety
