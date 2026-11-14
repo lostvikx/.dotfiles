@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "opencode/deepseek-v4.1-flash-free",
+  "model": "openai/gpt-6.1-sol",
   "update": "auto",
   "formatter": true,
   "experimental": { "todo": true },
