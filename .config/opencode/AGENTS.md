@@ -24,8 +24,8 @@
 ## Subagents
 
 - Delegate when a task benefits from isolated context, parallel execution, or a specialist role. Handle small, single-file edits in the main agent.
-- Route by strength: `explore` for read-only codebase and web research, `general` for multi-step work in parallel, `data-scientist` for dataset inspection and statistical analysis, `docs-writer` for READMEs, API docs, docstrings, and changelogs.
-- Respect each agent's access: `code-reviewer` and `data-scientist` cannot edit files; `docs-writer` cannot run commands.
+- Route by strength: `explore` for read-only codebase and web research, `general` for multi-step work in parallel, `data-scientist` for dataset inspection and statistical analysis, `docs-writer` for READMEs, API docs, docstrings, and changelogs, `code-reviewer` for a second-pass diff review.
+- Respect each agent's access: `code-reviewer` and `data-scientist` cannot use the edit/write/patch tools; `docs-writer` cannot run commands. All three cannot spawn further subagents.
 - Pass the context each subagent needs in its prompt. It starts with a fresh context and never sees the parent conversation.
 - Subagents always run in the background. Continue with non-overlapping work and do not poll for results.
 - Do not delegate work that is faster to do directly, and never launch two subagents that would edit the same files.
