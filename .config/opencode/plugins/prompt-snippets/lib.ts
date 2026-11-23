@@ -10,7 +10,6 @@ export type Snippet = {
   description: string
   body: string
   placement: Placement
-  order: number
 }
 
 export type Mention = {
@@ -65,7 +64,6 @@ export function parse(name: string, raw: string): Snippet {
   const placement: Placement = ["append", "prepend", "inline"].includes(meta.placement)
     ? (meta.placement as Placement)
     : "inline"
-  const n = Number.parseFloat(meta.order ?? "")
   const content = body.trim()
   return {
     name,
@@ -73,12 +71,14 @@ export function parse(name: string, raw: string): Snippet {
     description: meta.description?.trim() || content.split(/\r?\n/, 1)[0]?.trim() || "",
     body: content,
     placement,
-    order: Number.isNaN(n) ? 100 : n,
   }
 }
 
-export const byOrder = (a: Snippet, b: Snippet) =>
-  a.order - b.order || a.name.localeCompare(b.name)
+const byTag = (a: Snippet, b: Snippet) => a.name.localeCompare(b.name)
+
+export const byTitle = (a: Snippet, b: Snippet) =>
+  a.title.localeCompare(b.title, undefined, { sensitivity: "base" }) ||
+  a.name.localeCompare(b.name)
 
 export async function listSnippetFiles(dir = DIR): Promise<string[]> {
   try {
@@ -100,7 +100,7 @@ export async function loadSnippets(dir = DIR): Promise<Snippet[]> {
       }
     }),
   )
-  return loaded.filter((s): s is Snippet => s !== undefined).sort(byOrder)
+  return loaded.filter((s): s is Snippet => s !== undefined).sort(byTag)
 }
 
 function indexTags(files: readonly string[]): Map<string, SnippetFile> {
@@ -322,12 +322,12 @@ export async function expandDetails(text: string, dir = DIR): Promise<Expansion>
   const core = applyEdits(text, edits)
   const pre = snippets
     .filter((snippet) => snippet.placement === "prepend")
-    .sort(byOrder)
+    .sort(byTag)
     .map((snippet) => snippet.body)
     .join("\n\n")
   const post = snippets
     .filter((snippet) => snippet.placement === "append")
-    .sort(byOrder)
+    .sort(byTag)
     .map((snippet) => snippet.body)
     .join("\n\n")
 

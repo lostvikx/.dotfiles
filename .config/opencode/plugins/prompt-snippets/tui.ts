@@ -1,6 +1,6 @@
 import { Plugin } from "@opencode/plugin/tui"
 import type { EditBufferRenderable } from "@opentui/core"
-import { DIR, loadSnippets, tagInsertion } from "./lib"
+import { DIR, byTitle, loadSnippets, tagInsertion } from "./lib"
 
 type PromptTraits = {
   owner?: string
@@ -52,13 +52,9 @@ export default Plugin.define({
             const selected = await context.ui.dialog.select({
               title: "Insert prompt snippet",
               placeholder: "Search snippets...",
-              options: snippets.map((snippet) => ({
-                title:
-                  snippet.title === snippet.name
-                    ? `#${snippet.name}`
-                    : `${snippet.title} (#${snippet.name})`,
+              options: snippets.slice().sort(byTitle).map((snippet) => ({
+                title: snippet.title,
                 value: snippet.name,
-                description: snippet.description || snippet.title,
                 footer: snippet.placement,
               })),
             })

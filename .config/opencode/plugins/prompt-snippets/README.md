@@ -8,9 +8,8 @@ instruction.
 
 - Press **alt+s** in the composer, or run **/snippet** (or **/snippets**), to
   open the snippet picker.
-- The picker shows each snippet's display name and tag, for example
-  `Ask questions (#ask-questions)`. Without a frontmatter `name`, only the tag
-  is shown.
+- The picker shows each snippet's display name and placement, sorted
+  alphabetically by name. Without a frontmatter `name`, the filename is shown.
 - Type to search, use `up`/`down` to navigate, `enter` to select, and `esc` to
   cancel.
 - Selecting a snippet inserts its tag into the composer without sending the
@@ -31,7 +30,7 @@ instruction.
 
 - When you send the prompt, `prepend` snippets are added before your text,
   `append` snippets after it, and `inline` snippets replace their tag directly.
-  Snippets within each group are sorted by `order`.
+  Prepend and append snippets are sorted alphabetically by tag.
 - A line containing only `prepend`/`append` tags is removed. Written next to
   text, a tag removes a following comma, semicolon, or colon and keeps
   sentence-ending punctuation.
@@ -50,7 +49,6 @@ optional frontmatter:
 name: Concise
 description: Keep answers short and to the point
 placement: prepend
-order: 10
 ---
 Keep your response concise. Skip preamble and unnecessary explanation.
 ```
@@ -61,10 +59,9 @@ The filename without `.md` is the tag you insert. For example,
 
 | Field | Required | Notes |
 |---|---|---|
-| `name` | no | Display name; defaults to the filename without `.md` |
-| `description` | no | Shown beside the snippet title in the picker; defaults to the first body line |
+| `name` | no | Title Case display name; defaults to the filename without `.md` |
+| `description` | no | Optional metadata; not shown in the picker |
 | `placement` | no | `prepend`, `append`, or `inline` (default: `inline`) |
-| `order` | no | Number; sorts snippets within their group (default: `100`, ties broken by tag) |
 
 ## Development
 

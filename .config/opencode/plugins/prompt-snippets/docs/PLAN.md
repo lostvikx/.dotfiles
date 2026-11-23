@@ -12,8 +12,9 @@ inserts snippet tags into the composer without submitting the prompt.
 - `index.ts` registers the V2 prompt hook. It expands tags and rewrites
   file/agent/skill mention offsets to match the changed text.
 - `tui.ts` registers `/snippet` (alias `/snippets`) and `alt+s`. It re-scans
-  snippets each time, shows the display name and tag, re-checks the focused
-  prompt editor after the dialog, and inserts the tag without submitting.
+  snippets each time, shows the display name and placement, re-checks the
+  focused prompt editor after the dialog, and inserts the tag without
+  submitting.
 - `snippets/` contains one Markdown file per snippet with optional
   frontmatter.
 
@@ -29,7 +30,8 @@ inserts snippet tags into the composer without submitting the prompt.
   sentence-ending punctuation is kept.
 - Expansion preserves the user's indentation and remaps mention offsets so
   file, agent, and skill attachments still resolve.
-- Multiple tags are supported and sorted by `order` within each group.
+- Multiple tags are supported; prepend and append bodies are sorted
+  alphabetically by tag within each group.
 - An empty snippets directory or an unfocused prompt shows a toast instead of
   opening an empty dialog.
 

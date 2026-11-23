@@ -3,7 +3,7 @@ import { mkdtemp, rm, writeFile } from "node:fs/promises"
 import { tmpdir } from "node:os"
 import { join } from "node:path"
 import { after, before, test } from "node:test"
-import { expand, expandDetails, loadSnippets, tagInsertion } from "./lib.ts"
+import { byTitle, expand, expandDetails, loadSnippets, parse, tagInsertion } from "./lib.ts"
 
 let dir = ""
 
@@ -12,19 +12,19 @@ before(async () => {
   await Promise.all([
     writeFile(
       join(dir, "pre-first.md"),
-      "---\nname: First prepend\nplacement: prepend\norder: 10\n---\nPRE1",
+      "---\nname: First prepend\nplacement: prepend\n---\nPRE1",
     ),
     writeFile(
       join(dir, "pre.md"),
-      "---\nname: Prepend\nplacement: prepend\norder: 20\n---\nPRE2",
+      "---\nname: Prepend\nplacement: prepend\n---\nPRE2",
     ),
     writeFile(
       join(dir, "post-first.md"),
-      "---\nname: First append\nplacement: append\norder: 10\n---\nPOST1",
+      "---\nname: First append\nplacement: append\n---\nPOST1",
     ),
     writeFile(
       join(dir, "post.md"),
-      "---\nname: Append\nplacement: append\norder: 20\n---\nPOST2",
+      "---\nname: Append\nplacement: append\n---\nPOST2",
     ),
     writeFile(join(dir, "inline.md"), "---\nplacement: inline\n---\nINLINE"),
     writeFile(join(dir, "Foo.MD"), "---\nname: Foo Case\nplacement: inline\n---\nCASE"),
@@ -41,6 +41,18 @@ test("loads snippets from the provided directory", async () => {
   assert.equal(snippets.find((snippet) => snippet.name === "Foo")?.title, "Foo Case")
 })
 
+test("sorts snippets alphabetically by title, breaking ties by tag", () => {
+  const snippets = [
+    parse("zulu", "---\nname: Beta\n---\n"),
+    parse("mike", "---\nname: Alpha\n---\n"),
+    parse("alpha", "---\nname: beta\n---\n"),
+  ]
+  assert.deepEqual(
+    snippets.sort(byTitle).map((snippet) => snippet.name),
+    ["mike", "alpha", "zulu"],
+  )
+})
+
 test("does not expand a tag after a word character", async () => {
   assert.equal(await expand("Please#inline", dir), "Please#inline")
 })
@@ -49,10 +61,10 @@ test("replaces inline tags", async () => {
   assert.equal(await expand("#inline and #inline", dir), "INLINE and INLINE")
 })
 
-test("orders prepend and append bodies", async () => {
+test("sorts prepend and append bodies alphabetically by tag", async () => {
   assert.equal(
     await expand("#pre-first\n#pre\nmiddle\n#post-first\n#post", dir),
-    "PRE1\n\nPRE2\n\nmiddle\n\nPOST1\n\nPOST2",
+    "PRE2\n\nPRE1\n\nmiddle\n\nPOST2\n\nPOST1",
   )
 })
 
