@@ -1,13 +1,13 @@
 # Qt Theme Variables
 export QT_SCALE_FACTOR=1.10
-export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_QPA_FONTDIR="/usr/share/fonts/TTF"
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 # XDG Base Directory
+export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
-export XDG_CACHE_HOME="${HOME}/.cache"
 
 # GTK Theme
 export GTK_CSD=0
@@ -19,9 +19,9 @@ export LIBVA_DRIVER_NAME=iHD
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# Cursor
-#export XCURSOR_THEME=Adwaita
+# Pointer - Desktop Cursor
 export XCURSOR_SIZE=24
+#export XCURSOR_THEME=Adwaita
 
 # Wayland
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
@@ -38,3 +38,6 @@ fi
 # Opencode
 export OPENCODE_ENABLE_EXA=1
 #export OPENCODE_ENABLE_PARALLEL=1
+
+# Zed Editor
+export LOCAL_NOTEBOOK_DEV=1
