@@ -3,4 +3,6 @@ name: Define Done
 description: Define observable completion criteria and check them
 placement: append
 ---
-Before starting, define the observable conditions that must be true for this task to be complete. Check the final result against each one.
+Use the `karpathy-guidelines` skill.
+Set observable success criteria before starting.
+Check each one and report what you couldn’t verify.
